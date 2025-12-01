@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- === BAGIAN 1: BAYANGAN (SHADOW) === -->
+    <!-- Kita buat bayangan ini muncul di paling bawah urutan tumpukan -->
+
+    <!-- Bayangan Layer 1 (Paling Luar/Halus) -->
+    <!-- Top=10dp supaya bayangan TIDAK muncul di atas header (dekat status bar) -->
+    <item android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0D000000"/>
+            <corners android:bottomLeftRadius="16dp" android:bottomRightRadius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Bayangan Layer 2 (Agak Gelap) -->
+    <item android:top="12dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1A000000"/>
+            <corners android:bottomLeftRadius="16dp" android:bottomRightRadius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- === BAGIAN 2: BACKGROUND UTAMA ANDA === -->
+    <!-- Ini kita taruh DI ATAS bayangan -->
+    <!-- android:bottom="6dp" PENTING agar gambar header naik sedikit, -->
+    <!-- sehingga bayangan di layer bawahnya terlihat 'mengintip' keluar -->
+
+    <item android:bottom="6dp"
+        android:drawable="@drawable/header_background_home">
+    </item>
+
+</layer-list>

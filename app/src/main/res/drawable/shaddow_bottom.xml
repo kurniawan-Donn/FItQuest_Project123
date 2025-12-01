@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Layer 1: Bayangan Paling Bawah (Paling Halus & Luas) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0D000000"/> <!-- Hitam transparansi 5% -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Layer 2: Bayangan Tengah (Sedikit Lebih Gelap) -->
+    <!-- Diberi margin atas agar terlihat turun ke bawah -->
+    <item
+        android:top="2dp"
+        android:left="1dp"
+        android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1A000000"/> <!-- Hitam transparansi 10% -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Layer 3: Bayangan Paling Dekat (Paling Gelap) -->
+    <item
+        android:top="4dp"
+        android:left="2dp"
+        android:right="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#26000000"/> <!-- Hitam transparansi 15% -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Layer 4: Kartu Aslinya (Background Putih) -->
+    <!-- Margin bawah diberikan agar bayangan di layer 1-3 terlihat menjulur di bawah -->
+    <item android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,29 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="270"
+    android:toDegrees="270">
+
+    <!--
+         PENJELASAN SETTING:
+         1. Agar progress bar mulai dari ATAS (Jam 12), kita perlu memutar
+            seluruh drawable ini sebesar -90 atau 270 derajat.
+         2. Karena ini drawable statis yang diisi oleh nilai progress,
+            kita set fromDegrees dan toDegrees ke nilai yang sama (270)
+            agar posisi awal ring-nya "terkunci" di atas.
+         3. Arah "pengisian" progress (sweep) secara default sudah searah
+            jarum jam di Android.
+    -->
+
+    <shape
+        android:innerRadiusRatio="2.5"
+        android:shape="ring"
+        android:thickness="11dp"
+        android:useLevel="true"> <!-- useLevel="true" wajib agar bisa bergerak/diisi -->
+
+        <gradient
+            android:type="sweep"
+            android:startColor="#001594"
+            android:endColor="#6E82FD"
+            android:angle="0"/>
+
+    </shape>
+</rotate>
