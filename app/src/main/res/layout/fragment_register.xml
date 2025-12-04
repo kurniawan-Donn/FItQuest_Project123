@@ -216,7 +216,7 @@
                     android:layout_gravity="center"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Belum punya akun? Masuk"
+                    android:text="Sudah punya akun? Masuk"
                     android:textColor="#00A3FF"
                     android:textSize="14sp" />
 

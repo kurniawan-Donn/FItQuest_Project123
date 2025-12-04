@@ -1,172 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
     android:background="#EEEDED">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- ScrollView untuk Login Form -->
+    <ScrollView
+        android:id="@+id/login_scrollview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <!-- Header Background -->
-        <View
-            android:id="@+id/headerBackground"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/header_complete_shadow"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_height="wrap_content">
 
-        <!-- Logo FitQuest -->
-        <TextView
-            android:id="@+id/tvLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FitQuest"
-            android:textSize="42sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:layout_marginTop="60dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <!-- Header Background -->
+            <View
+                android:id="@+id/headerBackground"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/header_complete_shadow"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Card Container -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            <!-- Logo FitQuest -->
+            <TextView
+                android:id="@+id/tvLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FitQuest"
+                android:textSize="42sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="60dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-            <LinearLayout
+            <!-- Card Container -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#ffffff"
-                android:padding="32dp">
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <!-- Title -->
-                <TextView
-                    android:id="@+id/tvTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="32dp"
-                    android:text="Masuk Akun"
-                    android:textColor="#000000"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <!-- Email Input -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilEmail"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical"
+                    android:background="#ffffff"
+                    android:padding="32dp">
 
-                    android:hint="Email"
-                    android:textColorHint="#757575"
-                    app:hintTextColor="#9C27B0"
+                    <!-- Title -->
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="32dp"
+                        android:text="Masuk Akun"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-                    app:boxCornerRadiusBottomEnd="12dp"
-                    app:boxCornerRadiusBottomStart="12dp"
-                    app:boxCornerRadiusTopEnd="12dp"
-                    app:boxCornerRadiusTopStart="12dp"
-                    app:boxStrokeColor="#00A3FF"
-                    app:boxStrokeWidth="1.5dp">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etEmail"
+                    <!-- Email Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Email"
+                        android:textColorHint="#757575"
+                        app:hintTextColor="#9C27B0"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="#00A3FF"
+                        app:boxStrokeWidth="1.5dp">
 
-                        android:inputType="textEmailAddress"
-                        android:textColor="#000000"
-                        android:textSize="16sp" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
 
-
-                <!-- Password Input -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilPassword"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-
-                    android:hint="Password"
-                    android:textColorHint="#757575"
-                    app:hintTextColor="#9C27B0"
-
-                    app:boxCornerRadiusBottomEnd="12dp"
-                    app:boxCornerRadiusBottomStart="12dp"
-                    app:boxCornerRadiusTopEnd="12dp"
-                    app:boxCornerRadiusTopStart="12dp"
-                    app:boxStrokeColor="#00A3FF"
-                    app:boxStrokeWidth="1.5dp"
-
-                    app:endIconMode="password_toggle"
-                    app:endIconTint="#757575">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etPassword"
+                    <!-- Password Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassword"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:hint="Password"
+                        android:textColorHint="#757575"
+                        app:hintTextColor="#9C27B0"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="#00A3FF"
+                        app:boxStrokeWidth="1.5dp"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="#757575">
 
-                        android:inputType="textPassword"
-                        android:textColor="#000000"
-                        android:textStyle="italic"
-                        android:textSize="16sp" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:textColor="#000000"
+                            android:textStyle="italic"
+                            android:textSize="16sp" />
 
-                    <!-- PENTING: android:padding="16dp" SUDAH DIHAPUS -->
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <!-- Login Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginBottom="16dp"
+                        android:backgroundTint="#00A3FF"
+                        android:text="Masuk"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        app:cornerRadius="12dp"
+                        app:strokeColor="#3CFB06"
+                        app:strokeWidth="1dp"/>
 
+                    <!-- Register Link -->
+                    <TextView
+                        android:id="@+id/tvRegisterLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="Belum punya akun? Daftar"
+                        android:textColor="#00A3FF"
+                        android:textSize="14sp" />
 
-                <!-- Login Button -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnLogin"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginBottom="16dp"
-                    android:backgroundTint="#00A3FF"
-                    android:text="Masuk"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
+                </LinearLayout>
 
-                    app:cornerRadius="12dp"
-                    app:strokeColor="#3CFB06"
-                    app:strokeWidth="1dp"/>
+            </androidx.cardview.widget.CardView>
 
-                <!-- Register Link -->
-                <TextView
-                    android:id="@+id/tvRegisterLink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="Belum punya akun? Daftar"
-                    android:textColor="#00A3FF"
-                    android:textSize="14sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+    <!-- Fragment Container untuk RegisterFragment (Awalnya tersembunyi) -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>

@@ -2,9 +2,13 @@ package com.example.fitquest
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -17,24 +21,16 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var etPassword: TextInputEditText
     private lateinit var btnLogin: MaterialButton
     private lateinit var tvRegisterLink: TextView
+    private lateinit var fragmentContainer: FragmentContainerView
+    private lateinit var loginScrollView: ScrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Initialize views
         initializeViews()
-
-        // Setup click listeners
         setupListeners()
-
-        // Handle back button with modern API
-        onBackPressedDispatcher.addCallback(this, object : androidx.activity.OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                // Prevent going back from login screen
-                finishAffinity()
-            }
-        })
+        setupBackPressedHandler()
     }
 
     private fun initializeViews() {
@@ -44,31 +40,61 @@ class LoginActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
         tvRegisterLink = findViewById(R.id.tvRegisterLink)
+        fragmentContainer = findViewById(R.id.fragment_container)
+        loginScrollView = findViewById(R.id.login_scrollview)
     }
 
     private fun setupListeners() {
-        // Login button click
         btnLogin.setOnClickListener {
             handleLogin()
         }
 
-        // Register link click
         tvRegisterLink.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            openRegisterFragment()
         }
     }
 
+    private fun setupBackPressedHandler() {
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (fragmentContainer.visibility == View.VISIBLE) {
+                    showLoginForm() // Panggil fungsi untuk kembali ke login
+                } else {
+                    finishAffinity()
+                }
+            }
+        })
+    }
+
+    // Fungsi public untuk menampilkan form login (bisa dipanggil dari fragment)
+    fun showLoginForm() {
+        fragmentContainer.visibility = View.GONE
+        loginScrollView.visibility = View.VISIBLE
+
+        // Hapus fragment dari back stack jika ada
+        if (supportFragmentManager.backStackEntryCount > 0) {
+            supportFragmentManager.popBackStack()
+        }
+    }
+
+    private fun openRegisterFragment() {
+        loginScrollView.visibility = View.GONE
+        fragmentContainer.visibility = View.VISIBLE
+
+        val registerFragment = RegisterFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, registerFragment)
+            .addToBackStack("register")
+            .commit()
+    }
+
     private fun handleLogin() {
-        // Get input values
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString().trim()
 
-        // Reset errors
         tilEmail.error = null
         tilPassword.error = null
 
-        // Validate inputs
         var isValid = true
 
         if (email.isEmpty()) {
@@ -87,14 +113,9 @@ class LoginActivity : AppCompatActivity() {
             isValid = false
         }
 
-        // If validation passed
         if (isValid) {
-            // TODO: Implement actual login logic with backend/database
-            // For now, we'll use dummy validation
             if (validateLogin(email, password)) {
                 Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
-
-                // Navigate to MainActivity
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
@@ -106,12 +127,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun validateLogin(email: String, password: String): Boolean {
-        // TODO: Replace with actual authentication logic
-        // This is just dummy validation for testing
-
-        // For testing purposes, accept any email with password "123456"
-        // In production, this should connect to your backend/database
-
         return password.length >= 6
     }
 }
