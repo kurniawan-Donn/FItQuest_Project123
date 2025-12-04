@@ -44,13 +44,6 @@ class ProfileActivity : AppCompatActivity() {
                     finish()
                     true
                 }
-                R.id.nav_shop -> {
-                    val intent = Intent(this, ShopActivity::class.java)
-                    startActivity(intent)
-                    setActivityTransition()
-                    finish()
-                    true
-                }
                 R.id.nav_mission -> {
                     val intent = Intent(this, MissionActivity::class.java)
                     startActivity(intent)

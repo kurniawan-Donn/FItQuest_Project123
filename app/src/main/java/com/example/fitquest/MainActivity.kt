@@ -39,13 +39,6 @@ class MainActivity : AppCompatActivity() {
                     // Already on home, do nothing
                     true
                 }
-                R.id.nav_shop -> {
-                    val intent = Intent(this, ShopActivity::class.java)
-                    startActivity(intent)
-                    setActivityTransition()
-                    finish()
-                    true
-                }
                 R.id.nav_mission -> {
                     val intent = Intent(this, MissionActivity::class.java)
                     startActivity(intent)

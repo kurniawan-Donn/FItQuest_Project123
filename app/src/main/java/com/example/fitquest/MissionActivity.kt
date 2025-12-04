@@ -44,13 +44,7 @@ class MissionActivity : AppCompatActivity() {
                     finish()
                     true
                 }
-                R.id.nav_shop -> {
-                    val intent = Intent(this, ShopActivity::class.java)
-                    startActivity(intent)
-                    setActivityTransition()
-                    finish()
-                    true
-                }
+
                 R.id.nav_mission -> {
                     // Already on mission, do nothing
                     true
