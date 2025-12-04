@@ -1,0 +1,9 @@
+<!-- res/values/styles.xml -->
+<resources>
+    <!-- Switch Theme -->
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#4CAF50</item>
+        <item name="colorSwitchThumbNormal">#BDBDBD</item>
+        <item name="android:colorForeground">#4CAF50</item>
+    </style>
+</resources>
