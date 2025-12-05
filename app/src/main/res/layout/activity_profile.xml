@@ -214,7 +214,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Pilih Bahasa Anda"
+                            android:text="Pilih Bahasa"
                             android:textColor="#2196F3"
                             android:textSize="14sp" />
 
@@ -316,7 +316,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Pilih Satuan Ukuran"
+                            android:text="Pilih Jenis Tampilan"
                             android:textColor="#2196F3"
                             android:textSize="14sp" />
 
