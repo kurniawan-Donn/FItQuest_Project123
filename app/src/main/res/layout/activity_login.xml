@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEEDED">
+    android:background="#DCDCDC">
 
     <!-- ScrollView untuk Login Form -->
     <ScrollView
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="#ffffff"
+                    android:background="#FFFFFF"
                     android:padding="32dp">
 
                     <!-- Title -->

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Selected state -->
-    <item android:color="#00A3FF" android:state_checked="true"/>
-    <!-- Default state -->
-    <item android:color="#757575"/>
+    <item android:color="@color/bottom_nav_selected" android:state_checked="true"/>
+    <item android:color="@color/bottom_nav_unselected"/>
 </selector>

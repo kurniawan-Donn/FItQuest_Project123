@@ -24,17 +24,12 @@
 
         <!-- Register Activity -->
         <activity
-            android:name=".RegisterActivity"
+            android:name=".LoginActivity$LoginActivity"
             android:exported="false" />
 
         <!-- Main Activity (Home) -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-
-        <!-- Shop Activity -->
-        <activity
-            android:name=".ShopActivity"
             android:exported="false" />
 
         <!-- Mission Activity -->

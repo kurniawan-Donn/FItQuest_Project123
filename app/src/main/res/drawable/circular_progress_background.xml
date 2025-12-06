@@ -4,12 +4,12 @@
     android:toDegrees="270">
 
     <shape
-        android:innerRadiusRatio="2.5"
+        android:innerRadiusRatio="2.4"
         android:shape="ring"
         android:thickness="10dp"
         android:useLevel="true">
 
-        <solid android:color="#E0E0E0"/>
+        <solid android:color="#FFFFFF"/>
 
     </shape>
 

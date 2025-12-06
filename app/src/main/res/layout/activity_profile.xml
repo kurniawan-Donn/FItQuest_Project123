@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="?attr/colorSurface"
     tools:context=".ProfileActivity">
 
-    <!-- Header dengan Background Biru -->
+    <!-- Header -->
     <RelativeLayout
         android:id="@+id/headerProfile"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/header_background"
-        android:elevation="4dp">
+        android:background="@drawable/header_complete_shadow"
+        android:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Profil"
-            android:textColor="@android:color/white"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
+
+    <!-- Scroll -->
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/headerProfile">
+        android:layout_height="0dp"
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/headerProfile"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,12 +48,12 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Header Profil -->
+            <!-- Card Profil -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="4dp">
 
@@ -52,11 +64,10 @@
                     android:orientation="horizontal"
                     android:padding="16dp">
 
-                    <!-- Avatar -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="65dp"
                         android:layout_height="65dp"
-                        app:cardBackgroundColor="#E6D3D3"
+                        app:cardBackgroundColor="?attr/colorSurface"
                         app:cardCornerRadius="30dp"
                         app:cardElevation="0dp">
 
@@ -69,25 +80,25 @@
                             tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Nama -->
                     <TextView
                         android:id="@+id/tvNamaPengguna"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="Hi, Pria"
-                        android:textColor="#000000"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="20sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Card Grafik Progress -->
+
+            <!-- Card Grafik -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="4dp">
 
@@ -97,19 +108,17 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- Line Chart -->
                     <com.github.mikephil.charting.charts.LineChart
                         android:id="@+id/lineChart"
                         android:layout_width="match_parent"
                         android:layout_height="200dp" />
 
-                    <!-- Label Progress -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="8dp"
                         android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"
                         android:orientation="horizontal">
 
                         <View
@@ -119,21 +128,22 @@
                             android:background="@drawable/circle_purple" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
                             android:text="% Progres"
-                            android:textColor="#666666"
-                            android:textSize="14sp" />
+                            android:textColor="?attr/colorOnSurfaceVariant"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Modus Gelap -->
+
+            <!-- Card Dark Mode -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp">
 
@@ -144,12 +154,12 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:text="Modus gelap"
-                        android:textColor="#000000"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -163,20 +173,20 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Aktifkan Mode Gelap"
-                            android:textColor="#2196F3"
+                            android:textColor="?attr/colorPrimary"
                             android:textSize="14sp" />
 
                         <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/switchDarkMode"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:checked="false"
                             android:theme="@style/SwitchTheme" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Ubah Bahasa -->
+
+            <!-- Card Ubah Bahasa -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardUbahBahasa"
                 android:layout_width="match_parent"
@@ -185,23 +195,23 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:text="Ubah Bahasa"
-                        android:textColor="#000000"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -215,7 +225,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Pilih Bahasa Anda"
-                            android:textColor="#2196F3"
+                            android:textColor="?attr/colorPrimary"
                             android:textSize="14sp" />
 
                         <ImageView
@@ -227,6 +237,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- Syarat & Ketentuan -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardSyaratKetentuan"
@@ -236,23 +247,23 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:text="Syarat &amp; Ketentuan"
-                        android:textColor="#000000"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -266,7 +277,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Ketentuan Penggunaan Aplikasi"
-                            android:textColor="#2196F3"
+                            android:textColor="?attr/colorPrimary"
                             android:textSize="14sp" />
 
                         <ImageView
@@ -278,6 +289,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- Jenis Peta -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardJenisPeta"
@@ -287,23 +299,23 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="?attr/colorSurfaceVariant"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:padding="16dp"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:text="Jenis peta"
-                        android:textColor="#000000"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -317,7 +329,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Tampilan Peta"
-                            android:textColor="#2196F3"
+                            android:textColor="?attr/colorPrimary"
                             android:textSize="14sp" />
 
                         <ImageView
@@ -328,6 +340,22 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
     </ScrollView>
-</RelativeLayout>
+
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

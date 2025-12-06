@@ -1,0 +1,6 @@
+<resources>
+    <style name="SwitchTheme" parent="Theme.Material3.DayNight">
+        <item name="colorControlActivated">#00A3FF</item>
+        <item name="colorSwitchThumbNormal">#BDBDBD</item>
+    </style>
+</resources>

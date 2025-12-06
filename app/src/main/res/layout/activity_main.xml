@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="?attr/colorSurface">
 
     <!-- Header Background -->
     <View
@@ -101,7 +101,9 @@
             android:orientation="vertical"
             android:paddingHorizontal="16dp"
             android:clipChildren="false"
+            app:cardBackgroundColor="?attr/colorSurfaceVariant"
             android:clipToPadding="false">
+
 
             <!-- Progress and Mission Card Container -->
             <LinearLayout
@@ -129,7 +131,7 @@
                         app:cardCornerRadius="16dp"
                         app:cardElevation="6dp"
                         app:cardUseCompatPadding="true"
-                        app:cardBackgroundColor="#FFFFFF">
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -168,7 +170,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:text="65%"
-                                android:textColor="#000000"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
@@ -181,7 +183,7 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="8dp"
                                 android:text="Target harian: 10 km"
-                                android:textColor="#666666"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp" />
 
                         </RelativeLayout>
@@ -203,7 +205,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:cardCornerRadius="16dp"
-                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
                         app:cardElevation="6dp"
                         app:cardUseCompatPadding="true">
 
@@ -233,7 +235,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="Selesaikan Misi Harinmu!"
-                                    android:textColor="#000000"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
                             </LinearLayout>
@@ -263,7 +265,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Misi Lari 1 km"
-                                        android:textColor="#000000"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="12sp"
                                         android:textStyle="bold" />
 
@@ -271,7 +273,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Hadiah: 25 poin"
-                                        android:textColor="#666666"
+                                        android:textColor="?attr/colorPrimary"
                                         android:textSize="11sp" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -306,7 +308,7 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="6dp"
                 app:cardUseCompatPadding="true"
-                app:cardBackgroundColor="#FFFFFF">
+                app:cardBackgroundColor="?attr/colorSurfaceVariant">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -339,7 +341,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Pengambilan hadiah"
-                            android:textColor="#000000"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -353,7 +355,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginVertical="8dp"
-                        android:background="#E0E0E0" />
+                        android:background="#C7BEBE"/>
 
                     <!-- Pertukaran Point -->
                     <LinearLayout
@@ -380,7 +382,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:text="Pertukaran point"
-                            android:textColor="#000000"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -394,7 +396,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginVertical="8dp"
-                        android:background="#E0E0E0" />
+                        android:background="#C7BEBE" />
 
                     <!-- Voucher 10% Diskon -->
                     <LinearLayout
@@ -426,7 +428,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Voucher"
-                                android:textColor="#000000"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -434,7 +436,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="10% Diskon"
-                                android:textColor="#666666"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -454,7 +456,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginVertical="8dp"
-                        android:background="#E0E0E0" />
+                        android:background="#C7BEBE" />
 
                     <!-- Gift Card -->
                     <LinearLayout
@@ -486,7 +488,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Gift card"
-                                android:textColor="#000000"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
@@ -494,7 +496,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Rp 25.000"
-                                android:textColor="#666666"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -523,7 +525,7 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#BDC7F3"
+        android:background="?attr/colorSurface"
         app:itemIconTint="@color/bottom_nav_color"
         app:itemTextColor="@color/bottom_nav_color"
         app:labelVisibilityMode="labeled"

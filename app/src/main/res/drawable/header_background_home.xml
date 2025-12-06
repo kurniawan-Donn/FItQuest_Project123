@@ -9,7 +9,7 @@
         android:type="linear"/>
 
     <corners
-        android:bottomLeftRadius="25dp"
-        android:bottomRightRadius="25dp"/>
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"/>
 
 </shape>

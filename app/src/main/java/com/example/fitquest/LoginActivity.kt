@@ -1,5 +1,6 @@
 package com.example.fitquest
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.fragment.app.FragmentContainerView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import androidx.appcompat.app.AppCompatDelegate
 
 class LoginActivity : AppCompatActivity() {
 
@@ -33,6 +35,18 @@ class LoginActivity : AppCompatActivity() {
         setupBackPressedHandler()
     }
 
+    class LoginActivity : AppCompatActivity() {
+
+        // ... variabel lainnya
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_login)
+
+
+        }
+    }
     private fun initializeViews() {
         tilEmail = findViewById(R.id.tilEmail)
         tilPassword = findViewById(R.id.tilPassword)
