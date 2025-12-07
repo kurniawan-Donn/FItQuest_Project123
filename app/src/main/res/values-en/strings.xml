@@ -53,62 +53,37 @@
     <string name="back">icon back left</string>
     <string name="back_button">Back</string>
     <string name="terms_content">
+    <string name="terms_usage_en">
     <![CDATA[
-    <b>FitQuest Application Terms and Conditions</b>\n\n
+    <b>FITQUEST APPLICATION: SUMMARY TERMS AND CONDITIONS</b><br/><br/>
 
-    <b>1. Acceptance of Terms</b>\n
-    By downloading, installing, or using the FitQuest application, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, please do not use this application.\n\n
+    By using the <b>FitQuest</b> application, you are deemed to have automatically <b>agreed, understood, and consented</b> to comply with the following Summary Terms & Conditions and our Privacy Policy:<br/><br/>
 
-    <b>2. Service Description</b>\n
-    FitQuest is a fitness tracking application that helps users track sports activities, complete daily missions, and collect points that can be redeemed for rewards.\n\n
+    <b>1. BINDING AGREEMENT</b><br/>
+    Your continued use implies absolute acceptance of these Terms and our <b><a href="https://google.com">Privacy Policy</a></b>. Any update to these documents shall be immediately binding.<br/><br/>
 
-    <b>3. User Account</b>\n
-    • You are responsible for maintaining the confidentiality of your account information\n
-    • You are responsible for all activities that occur in your account\n
-    • You must immediately notify us if there is unauthorized use of your account\n\n
+    <b>2. ACCOUNT AND SECURITY</b><br/>
+    You bear full responsibility for the <b>confidentiality</b> of your account <i>username</i> and <i>password</i>. You must ensure all registration information is <b>accurate and kept current</b>.<br/><br/>
 
-    <b>4. Application Usage</b>\n
-    • This application is for personal and non-commercial use only\n
-    • You may not use the application for any illegal purposes\n
-    • You may not attempt to gain unauthorized access to systems or networks connected to the application\n\n
+    <b>3. USER DATA AND PRIVACY</b><br/>
+    We collect and process your <b>running activity, location, and personal data</b> strictly to provide and enhance the FitQuest service. Your data usage rights are detailed in our <b><a href="https://google.com">Privacy Policy</a></b>.<br/><br/>
 
-    <b>5. Points and Rewards System</b>\n
-    • Points are earned by completing missions and activities in the application\n
-    • Points can be exchanged for available vouchers or rewards\n
-    • We reserve the right to change point values or rewards at any time\n
-    • Points cannot be transferred or sold\n\n
+    <b>4. DISCLAIMER OF RESPONSIBILITY</b><br/>
+    FitQuest is solely a <b>fitness monitoring tool</b>. We <b>assume no liability</b> for any injuries, health issues, or fitness outcomes achieved. <b>Crucial: Always consult a healthcare professional before starting or changing any exercise routine.</b><br/><br/>
 
-    <b>6. Privacy and Data</b>\n
-    • We respect your privacy and protect your personal data\n
-    • Location and activity data are collected to improve user experience\n
-    • We will not share your personal data with third parties without your permission\n\n
+    <b>5. INTELLECTUAL PROPERTY RIGHTS (IPR)</b><br/>
+    The entire application, including source code, interface design, and the <b>FitQuest</b> logo, is our exclusive property and is protected by IPR laws. You are strictly prohibited from copying, modifying, reverse-engineering, or distributing this content without prior written consent.<br/><br/>
 
-    <b>7. Service Changes</b>\n
-    • We reserve the right to modify, suspend, or discontinue services at any time\n
-    • We will notify users of significant changes to services\n\n
+    <b>6. GOVERNING LAW</b><br/>
+    These Terms and Conditions shall be governed by the laws of the <b>Republic of Indonesia</b>.<br/><br/>
 
-    <b>8. Limitation of Liability</b>\n
-    • The application is provided "as is" without any warranties\n
-    • We are not responsible for injuries or damages that occur while using the application\n
-    • You use this application at your own risk\n\n
+    <b>7. CONTACT POINT</b><br/>
+    For any official inquiries, support, or complaints, please contact our team via email at <b>[NichoNichoni143@gmail.com]</b>.<br/><br/>
 
-    <b>9. User Content</b>\n
-    • You retain rights to content you upload\n
-    • You grant us a license to use that content in the application\n
-    • You are responsible for content you share\n\n
-
-    <b>10. Termination</b>\n
-    • We reserve the right to suspend or terminate your access if you violate these terms\n
-    • You can stop using the application at any time by deleting your account\n\n
-
-    <b>11. Governing Law</b>\n
-    These terms and conditions are governed by the laws of the Republic of Indonesia.\n\n
-
-    <b>12. Contact Us</b>\n
-    If you have questions about these terms and conditions, please contact us at support@fitquest.com\n\n
-
-    <b>Last updated: December 2024</b>
+    Thank you for choosing and embarking on this adventure with <b>FitQuest</b>!
     ]]>
+</string>
+
 </string>
     <!-- Mission -->
     <string name="mission_page">Mission Page</string>
