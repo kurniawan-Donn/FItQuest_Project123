@@ -36,6 +36,5 @@ class MainActivity : AppCompatActivity() {
 
         // Hubungkan BottomNavigationView dengan NavController
         binding.bottomNavigation.setupWithNavController(navController)
-
     }
 }

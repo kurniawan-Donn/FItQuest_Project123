@@ -1,12 +1,12 @@
 package com.example.fitquest.ui.profil
 
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.graphics.toColorInt
 import androidx.fragment.app.Fragment
 import com.example.fitquest.databinding.FragmentProfilBinding
 import com.example.fitquest.ui.utils.ManajerPreferensi
@@ -36,20 +36,12 @@ class ProfileFragment : Fragment() {
 
         preferensi = ManajerPreferensi.dapatkanPreferensi(requireContext())
 
-        inisialisasiKomponen()
         aturGrafik()
         aturSaklarModeGelap()
         aturPendengarKlik()
     }
 
-    private fun inisialisasiKomponen() {
-        // Inisialisasi komponen lain jika diperlukan
-        // binding.tvNamaPengguna.text = "Hi, Pengguna"
-    }
-
     private fun aturGrafik() {
-        val grafik = binding.lineChart
-
         val data = arrayListOf(
             Entry(0f, 20f),
             Entry(1f, 70f),
@@ -60,50 +52,44 @@ class ProfileFragment : Fragment() {
             Entry(6f, 95f)
         )
 
-        // GUNAKAN EXTENSION FUNCTION KTX
-        val warnaUngu = "#673AB7".toColorInt()
-        val warnaUnguMuda = "#E1BEE7".toColorInt()
-        val warnaGrid = "#E0E0E0".toColorInt()
-        val warnaText = "#666666".toColorInt()
-
         val setData = LineDataSet(data, "% Progres").apply {
-            color = warnaUngu
-            setCircleColor(warnaUngu)
+            color = Color.parseColor("#673AB7")
+            setCircleColor(Color.parseColor("#673AB7"))
             circleRadius = 5f
             circleHoleRadius = 3f
             lineWidth = 2.5f
             valueTextSize = 0f
             mode = LineDataSet.Mode.CUBIC_BEZIER
             setDrawFilled(true)
-            fillColor = warnaUnguMuda
+            fillColor = Color.parseColor("#E1BEE7")
             fillAlpha = 180
         }
 
-        grafik.data = LineData(setData)
-        grafik.xAxis.apply {
-            position = XAxis.XAxisPosition.BOTTOM
+        binding.grafikgaris.data = LineData(setData) // Perbaikan: lineChart bukan grafik
+        binding.grafikgaris.xAxis.apply {
+            position = XAxis.XAxisPosition.BOTTOM // Perbaikan: XAxis.XAxisPosition.BOTTOM
             valueFormatter = IndexAxisValueFormatter(
                 arrayOf("Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu")
             )
             granularity = 1f
             setDrawGridLines(true)
-            gridColor = warnaGrid
-            textColor = warnaText
+            gridColor = Color.parseColor("#E0E0E0")
+            textColor = Color.parseColor("#666666")
             textSize = 10f
         }
 
-        grafik.axisLeft.apply {
+        binding.grafikgaris.axisLeft.apply {
             axisMinimum = 0f
             axisMaximum = 100f
             setDrawGridLines(true)
-            gridColor = warnaGrid
-            textColor = warnaText
+            gridColor = Color.parseColor("#E0E0E0")
+            textColor = Color.parseColor("#666666")
             textSize = 10f
         }
 
-        grafik.axisRight.isEnabled = false
+        binding.grafikgaris.axisRight.isEnabled = false
 
-        grafik.apply {
+        binding.grafikgaris.apply {
             description.isEnabled = false
             legend.isEnabled = false
             setTouchEnabled(true)
@@ -117,12 +103,10 @@ class ProfileFragment : Fragment() {
     }
 
     private fun aturSaklarModeGelap() {
-        val saklar = binding.switchDarkMode
-
         val modeGelap = preferensi.getBoolean("mode_gelap", false)
-        saklar.isChecked = modeGelap
+        binding.switchDarkMode.isChecked = modeGelap // Perbaikan: switchDarkMode bukan saklarModeGelap
 
-        saklar.setOnCheckedChangeListener { _, dicentang ->
+        binding.switchDarkMode.setOnCheckedChangeListener { _, dicentang ->
             preferensi.edit().apply {
                 putBoolean("mode_gelap", dicentang)
                 apply()
@@ -136,16 +120,15 @@ class ProfileFragment : Fragment() {
     }
 
     private fun aturPendengarKlik() {
-        binding.cardUbahBahasa.setOnClickListener {
+        binding.cardUbahBahasa.setOnClickListener { // Perbaikan: cardUbahBahasa bukan kartuUbahBahasa
             // TODO: Navigasi ke pengaturan bahasa
-            // findNavController().navigate(R.id.action_to_language)
         }
 
-        binding.cardSyaratKetentuan.setOnClickListener {
+        binding.cardSyaratKetentuan.setOnClickListener { // Perbaikan: cardSyaratKetentuan bukan kartuSyaratKetentuan
             // TODO: Navigasi ke syarat dan ketentuan
         }
 
-        binding.cardJenisPeta.setOnClickListener {
+        binding.cardJenisPeta.setOnClickListener { // Perbaikan: cardJenisPeta bukan kartuJenisPeta
             // TODO: Navigasi ke pengaturan peta
         }
     }

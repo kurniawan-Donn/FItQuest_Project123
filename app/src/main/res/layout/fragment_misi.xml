@@ -5,17 +5,20 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface">
 
-    <!-- Content -->
+    <!-- Konten -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:gravity="center"
         android:padding="24dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/ivIkonMisi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🎯"
@@ -23,36 +26,24 @@
             android:layout_marginBottom="16dp"/>
 
         <TextView
+            android:id="@+id/tvJudulMisi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mission"
+            android:text="Misi"
             android:textSize="28sp"
             android:textColor="#000000"
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
         <TextView
+            android:id="@+id/tvDeskripsiMisi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Halaman Mission"
+            android:text="Halaman Misi"
             android:textSize="16sp"
             android:textColor="#666666"
             android:gravity="center"/>
 
     </LinearLayout>
-
-    <!-- Bottom Navigation -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorSurface"
-        app:itemIconTint="@color/warna_navigasi_bawah"
-        app:itemTextColor="@color/warna_navigasi_bawah"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/menu_navigasi_bawah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

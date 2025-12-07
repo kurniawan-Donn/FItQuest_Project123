@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.fitquest.databinding.FragmentBerandaBinding
-import com.example.fitquest.R
 
 class HomeFragment : Fragment() {
 
@@ -15,11 +14,10 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
-        // PERBAIKAN: Ganti 'wadah' menjadi 'container' (konvensi)
-        container: ViewGroup?,
+        wadah: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentBerandaBinding.inflate(inflater, container, false)
+        _binding = FragmentBerandaBinding.inflate(inflater, wadah, false)
         return binding.root
     }
 
@@ -32,21 +30,16 @@ class HomeFragment : Fragment() {
     }
 
     private fun aturUI() {
-        // SUDAH BENAR: Menggunakan string resource yang sesuai
-        // tvSapaan menggunakan R.string.greeting
-        binding.tvSapaan.text = getString(R.string.greeting)
-        // tvPoin menggunakan format string R.string.points
-        binding.tvPoin.text = getString(R.string.points) // Angka '0' akan mengganti %d
-        // tvPersentaseProgres menggunakan format string R.string.progress_percentage
-        binding.tvPersentaseProgres.text = getString(R.string.progress_percentage, 65) // Angka '65' akan mengganti %d
-        // tvTargetHarian menggunakan format string R.string.daily_target, dan string lain R.string.daily_target_value sebagai parameter %s ))
+        // Atur data statis (nanti bisa diganti dengan data dinamis)
+        binding.tvSapaan.text = "Hi, Pria"
+        binding.tvPoin.text = "0 Poin"
+        binding.tvPersentaseProgres.text = "65%"
+        binding.tvTargetHarian.text = "Target harian: 10 km"
     }
 
     private fun aturPendengarKlik() {
-        // Listener untuk tombol dan item menu
         binding.btnMulaiMisi.setOnClickListener {
             // TODO: Navigasi ke halaman mulai misi
-            // findNavController().navigate(R.id.action_to_mission)
         }
 
         binding.klaimHadiah.setOnClickListener {

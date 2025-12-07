@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface">
 
+    <!-- Header Background -->
     <View
         android:id="@+id/latarBelakangHeader"
         android:layout_width="match_parent"
@@ -14,22 +15,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Logo Icon -->
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/ic_logo"
-        android:contentDescription="@string/app_name"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Nama Aplikasi -->
     <TextView
         android:id="@+id/tvNamaAplikasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"  android:textSize="32sp"
+        android:text="FitQuest"
+        android:textSize="32sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:layout_marginStart="10dp"
@@ -37,16 +40,19 @@
         app:layout_constraintTop_toTopOf="@id/ivLogo"
         app:layout_constraintBottom_toBottomOf="@id/ivLogo"/>
 
+    <!-- Teks Sapaan -->
     <TextView
         android:id="@+id/tvSapaan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hi, Pria"  android:textSize="20sp"
+        android:text="Hi, Pria"
+        android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@id/ivLogo"
         app:layout_constraintTop_toBottomOf="@id/ivLogo"/>
 
+    <!-- Badge Poin -->
     <LinearLayout
         android:id="@+id/layoutPoin"
         android:layout_width="wrap_content"
@@ -68,6 +74,7 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
+    <!-- ScrollView untuk konten -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -88,6 +95,7 @@
             android:clipChildren="false"
             android:clipToPadding="false">
 
+            <!-- Kontainer Kartu Progres dan Misi -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,6 +105,7 @@
                 android:clipToPadding="false"
                 android:baselineAligned="false">
 
+                <!-- Kartu Progres Lingkaran -->
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -120,6 +129,7 @@
                             android:gravity="center"
                             android:padding="16dp">
 
+                            <!-- Latar Belakang Progres Lingkaran -->
                             <ProgressBar
                                 android:id="@+id/latarBelakangProgres"
                                 style="?android:attr/progressBarStyleHorizontal"
@@ -142,6 +152,7 @@
                                 app:indicatorColor="#001594"
                                 app:trackCornerRadius="6dp" />
 
+                            <!-- Teks Persentase -->
                             <TextView
                                 android:id="@+id/tvPersentaseProgres"
                                 android:layout_width="wrap_content"
@@ -152,6 +163,7 @@
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
+                            <!-- Teks Target -->
                             <TextView
                                 android:id="@+id/tvTargetHarian"
                                 android:layout_width="wrap_content"
@@ -162,11 +174,13 @@
                                 android:text="Target harian: 10 km"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp" />
+
                         </RelativeLayout>
 
                     </androidx.cardview.widget.CardView>
                 </FrameLayout>
 
+                <!-- Kartu Misi -->
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -190,6 +204,7 @@
                             android:orientation="vertical"
                             android:padding="16dp">
 
+                            <!-- Ikon Trophy dan Judul -->
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -202,21 +217,24 @@
                                     android:layout_width="32dp"
                                     android:layout_height="32dp"
                                     android:layout_marginEnd="8dp"
-                                    android:contentDescription="@string/complete_mission" android:src="@drawable/ic_trophy" />
+                                    android:src="@drawable/ic_trophy" />
 
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="@string/complete_mission" android:textColor="?attr/colorOnSurface"
+                                    android:text="Selesaikan Misi Harinmu!"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
                             </LinearLayout>
 
+                            <!-- Ikon Lari dan Detail Misi -->
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="16dp" android:gravity="center_vertical"
+                                android:layout_marginBottom="12dp"
+                                android:gravity="center_vertical"
                                 android:orientation="horizontal">
 
                                 <ImageView
@@ -224,7 +242,7 @@
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
                                     android:layout_marginEnd="8dp"
-                                    android:contentDescription="@string/run_mission" android:src="@drawable/ic_runner" />
+                                    android:src="@drawable/ic_runner" />
 
                                 <LinearLayout
                                     android:layout_width="0dp"
@@ -235,24 +253,28 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/run_mission"
+                                        android:text="Misi Lari 1 km"
                                         android:textColor="?attr/colorOnSurface"
                                         android:textSize="12sp"
-                                        android:textStyle="bold"
-                                        android:layout_marginBottom="2dp" />
+                                        android:textStyle="bold" />
+
                                     <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/reward"
-                                    android:textColor="?attr/colorPrimary"
-                                    android:textSize="11sp" />
-                                </LinearLayout>                            </LinearLayout>
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hadiah: 25 poin"
+                                        android:textColor="?attr/colorPrimary"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!-- Tombol Mulai -->
                             <Button
                                 android:id="@+id/btnMulaiMisi"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:backgroundTint="?attr/colorPrimary"
-                                android:text="@string/start_button" android:textAllCaps="false"
+                                android:text="Mulai"
+                                android:textAllCaps="false"
                                 android:textColor="#FFFFFF"
                                 android:textSize="14sp"
                                 app:rippleColor="?attr/colorOnPrimary"
@@ -267,6 +289,7 @@
 
             </LinearLayout>
 
+            <!-- Kartu Menu -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/kartuMenu"
                 android:layout_width="match_parent"
@@ -283,6 +306,7 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
+                    <!-- Pengambilan Hadiah -->
                     <LinearLayout
                         android:id="@+id/klaimHadiah"
                         android:layout_width="match_parent"
@@ -299,21 +323,21 @@
                             android:layout_height="48dp"
                             android:background="@drawable/icon_background"
                             android:padding="2dp"
-                            android:contentDescription="@string/claim_reward" android:src="@drawable/ic_gift" />
+                            android:src="@drawable/ic_gift" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="@string/claim_reward" android:textColor="?attr/colorOnSurface"
+                            android:text="Pengambilan hadiah"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:contentDescription="@string/nav_arrow"
                             android:src="@drawable/ic_arrow_right" />
                     </LinearLayout>
 
@@ -323,6 +347,7 @@
                         android:layout_marginVertical="8dp"
                         android:background="#C7BEBE"/>
 
+                    <!-- Pertukaran Poin -->
                     <LinearLayout
                         android:id="@+id/tukarPoin"
                         android:layout_width="match_parent"
@@ -339,14 +364,14 @@
                             android:layout_height="48dp"
                             android:background="@drawable/icon_background"
                             android:padding="2dp"
-                            android:contentDescription="@string/exchange_point" android:src="@drawable/ic_exchange" />
+                            android:src="@drawable/ic_exchange" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="@string/exchange_point"
+                            android:text="Pertukaran poin"
                             android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -354,7 +379,6 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:contentDescription="@string/nav_arrow"
                             android:src="@drawable/ic_arrow_right" />
                     </LinearLayout>
 
@@ -364,6 +388,7 @@
                         android:layout_marginVertical="8dp"
                         android:background="#C7BEBE" />
 
+                    <!-- Voucher 10% Diskon -->
                     <LinearLayout
                         android:id="@+id/voucherDiskon"
                         android:layout_width="match_parent"
@@ -380,7 +405,7 @@
                             android:layout_height="48dp"
                             android:background="@drawable/icon_background"
                             android:padding="2dp"
-                            android:contentDescription="@string/voucher" android:src="@drawable/ic_voucher" />
+                            android:src="@drawable/ic_voucher" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -392,14 +417,16 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/voucher" android:textColor="?attr/colorOnSurface"
+                                android:text="Voucher"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/discount_10" android:textColor="?attr/colorPrimary"
+                                android:text="10% Diskon"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -409,7 +436,8 @@
                             android:background="@drawable/badge_blue"
                             android:paddingHorizontal="16dp"
                             android:paddingVertical="6dp"
-                            android:text="@string/points_100" android:textColor="#FFFFFF"
+                            android:text="100 poin"
+                            android:textColor="#FFFFFF"
                             android:textSize="14sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -420,6 +448,7 @@
                         android:layout_marginVertical="8dp"
                         android:background="#C7BEBE" />
 
+                    <!-- Kartu Hadiah -->
                     <LinearLayout
                         android:id="@+id/kartuHadiah"
                         android:layout_width="match_parent"
@@ -436,7 +465,7 @@
                             android:layout_height="48dp"
                             android:background="@drawable/icon_background"
                             android:padding="8dp"
-                            android:contentDescription="@string/gift_card" android:src="@drawable/ic_gift_card" />
+                            android:src="@drawable/ic_gift_card" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -448,14 +477,16 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/gift_card" android:textColor="?attr/colorOnSurface"
+                                android:text="Kartu hadiah"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/price_25k" android:textColor="?attr/colorPrimary"
+                                android:text="Rp 25.000"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -465,7 +496,8 @@
                             android:background="@drawable/badge_blue"
                             android:paddingHorizontal="16dp"
                             android:paddingVertical="6dp"
-                            android:text="@string/points_100" android:textColor="#FFFFFF"
+                            android:text="100 poin"
+                            android:textColor="#FFFFFF"
                             android:textSize="14sp"
                             android:textStyle="bold" />
                     </LinearLayout>

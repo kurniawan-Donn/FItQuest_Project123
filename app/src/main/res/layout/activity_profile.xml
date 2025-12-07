@@ -108,7 +108,7 @@
                     android:padding="16dp">
 
                     <com.github.mikephil.charting.charts.LineChart
-                        android:id="@+id/lineChart"
+                        android:id="@+id/grafikgaris"
                         android:layout_width="match_parent"
                         android:layout_height="200dp" />
 
