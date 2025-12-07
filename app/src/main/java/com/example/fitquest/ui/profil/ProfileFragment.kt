@@ -65,9 +65,9 @@ class ProfileFragment : Fragment() {
             fillAlpha = 180
         }
 
-        binding.grafikgaris.data = LineData(setData) // Perbaikan: lineChart bukan grafik
+        binding.grafikgaris.data = LineData(setData)
         binding.grafikgaris.xAxis.apply {
-            position = XAxis.XAxisPosition.BOTTOM // Perbaikan: XAxis.XAxisPosition.BOTTOM
+            position = XAxis.XAxisPosition.BOTTOM
             valueFormatter = IndexAxisValueFormatter(
                 arrayOf("Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu")
             )
@@ -104,7 +104,7 @@ class ProfileFragment : Fragment() {
 
     private fun aturSaklarModeGelap() {
         val modeGelap = preferensi.getBoolean("mode_gelap", false)
-        binding.switchDarkMode.isChecked = modeGelap // Perbaikan: switchDarkMode bukan saklarModeGelap
+        binding.switchDarkMode.isChecked = modeGelap
 
         binding.switchDarkMode.setOnCheckedChangeListener { _, dicentang ->
             preferensi.edit().apply {
@@ -120,15 +120,15 @@ class ProfileFragment : Fragment() {
     }
 
     private fun aturPendengarKlik() {
-        binding.cardUbahBahasa.setOnClickListener { // Perbaikan: cardUbahBahasa bukan kartuUbahBahasa
+        binding.cardUbahBahasa.setOnClickListener {
             // TODO: Navigasi ke pengaturan bahasa
         }
 
-        binding.cardSyaratKetentuan.setOnClickListener { // Perbaikan: cardSyaratKetentuan bukan kartuSyaratKetentuan
+        binding.cardSyaratKetentuan.setOnClickListener {
             // TODO: Navigasi ke syarat dan ketentuan
         }
 
-        binding.cardJenisPeta.setOnClickListener { // Perbaikan: cardJenisPeta bukan kartuJenisPeta
+        binding.cardJenisPeta.setOnClickListener {
             // TODO: Navigasi ke pengaturan peta
         }
     }

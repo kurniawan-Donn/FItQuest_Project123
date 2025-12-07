@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
 import com.example.fitquest.R
 import com.example.fitquest.ui.MainActivity
-import com.example.fitquest.ui.auth.RegisterFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import androidx.core.view.isVisible
 
 class LoginActivity : AppCompatActivity() {
 
@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
     private fun aturHandlerTombolKembali() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (fragmentContainer.visibility == View.VISIBLE) {
+                if (fragmentContainer.isVisible) {
                     tampilkanFormLogin() // Kembali ke form login
                 } else {
                     finishAffinity()
