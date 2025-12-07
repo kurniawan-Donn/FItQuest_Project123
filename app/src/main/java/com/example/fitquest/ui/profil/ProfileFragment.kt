@@ -1,5 +1,6 @@
 package com.example.fitquest.ui.profil
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
@@ -9,6 +10,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.example.fitquest.databinding.FragmentProfilBinding
+import com.example.fitquest.ui.settings.LanguageActivity
+import com.example.fitquest.ui.settings.TermsActivity
 import com.example.fitquest.ui.utils.ManajerPreferensi
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
@@ -66,11 +69,13 @@ class ProfileFragment : Fragment() {
         }
 
         binding.grafikgaris.data = LineData(setData)
+
+        // Get days of week from string array resources
+        val daysOfWeek = resources.getStringArray(com.example.fitquest.R.array.days_of_week)
+
         binding.grafikgaris.xAxis.apply {
             position = XAxis.XAxisPosition.BOTTOM
-            valueFormatter = IndexAxisValueFormatter(
-                arrayOf("Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu")
-            )
+            valueFormatter = IndexAxisValueFormatter(daysOfWeek)
             granularity = 1f
             setDrawGridLines(true)
             gridColor = Color.parseColor("#E0E0E0")
@@ -121,11 +126,15 @@ class ProfileFragment : Fragment() {
 
     private fun aturPendengarKlik() {
         binding.cardUbahBahasa.setOnClickListener {
-            // TODO: Navigasi ke pengaturan bahasa
+            // Navigasi ke LanguageActivity
+            val intent = Intent(requireContext(), LanguageActivity::class.java)
+            startActivity(intent)
         }
 
         binding.cardSyaratKetentuan.setOnClickListener {
-            // TODO: Navigasi ke syarat dan ketentuan
+            // Navigasi ke TermsActivity
+            val intent = Intent(requireContext(), TermsActivity::class.java)
+            startActivity(intent)
         }
 
         binding.cardJenisPeta.setOnClickListener {

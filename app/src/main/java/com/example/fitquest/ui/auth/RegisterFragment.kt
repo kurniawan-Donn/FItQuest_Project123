@@ -58,7 +58,6 @@ class RegisterFragment : Fragment() {
         }
 
         tvLoginLink.setOnClickListener {
-            // Panggil fungsi di LoginActivity untuk kembali ke login
             (requireActivity() as? LoginActivity)?.tampilkanFormLogin()
         }
     }
@@ -77,49 +76,49 @@ class RegisterFragment : Fragment() {
         var isValid = true
 
         if (fullName.isEmpty()) {
-            tilFullName.error = "Nama lengkap tidak boleh kosong"
+            tilFullName.error = getString(R.string.name_empty)
             isValid = false
         } else if (fullName.length < 3) {
-            tilFullName.error = "Nama minimal 3 karakter"
+            tilFullName.error = getString(R.string.name_min)
             isValid = false
         }
 
         if (email.isEmpty()) {
-            tilEmail.error = "Email tidak boleh kosong"
+            tilEmail.error = getString(R.string.email_empty)
             isValid = false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            tilEmail.error = "Format email tidak valid"
+            tilEmail.error = getString(R.string.email_invalid)
             isValid = false
         }
 
         if (password.isEmpty()) {
-            tilPassword.error = "Password tidak boleh kosong"
+            tilPassword.error = getString(R.string.password_empty)
             isValid = false
         } else if (password.length < 6) {
-            tilPassword.error = "Password minimal 6 karakter"
+            tilPassword.error = getString(R.string.password_min)
             isValid = false
         }
 
         if (confirmPassword.isEmpty()) {
-            tilConfirmPassword.error = "Konfirmasi password tidak boleh kosong"
+            tilConfirmPassword.error = getString(R.string.confirm_password_empty)
             isValid = false
         } else if (password != confirmPassword) {
-            tilConfirmPassword.error = "Password tidak cocok"
+            tilConfirmPassword.error = getString(R.string.password_not_match)
             isValid = false
         }
 
         if (isValid) {
             if (registerUser(fullName, email, password)) {
-                Toast.makeText(requireContext(), "Registrasi berhasil! Silakan login", Toast.LENGTH_SHORT).show()
-                // Kembali ke login setelah registrasi berhasil
+                Toast.makeText(requireContext(), getString(R.string.register_success), Toast.LENGTH_SHORT).show()
                 (requireActivity() as? LoginActivity)?.tampilkanFormLogin()
             } else {
-                Toast.makeText(requireContext(), "Registrasi gagal. Email mungkin sudah terdaftar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.register_failed), Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun registerUser(fullName: String, email: String, password: String): Boolean {
+        // TODO: Implementasi registrasi dengan database/API
         return true
     }
 }

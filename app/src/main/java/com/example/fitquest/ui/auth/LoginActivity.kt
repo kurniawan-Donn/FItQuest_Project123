@@ -1,5 +1,6 @@
 package com.example.fitquest.ui.auth
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
@@ -8,16 +9,17 @@ import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
 import com.example.fitquest.R
+import com.example.fitquest.ui.BaseActivity
 import com.example.fitquest.ui.MainActivity
+import com.example.fitquest.ui.utils.LocaleHelper
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import androidx.core.view.isVisible
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity() {
 
     private lateinit var tilEmail: TextInputLayout
     private lateinit var tilPassword: TextInputLayout
@@ -27,6 +29,10 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var tvRegisterLink: TextView
     private lateinit var fragmentContainer: FragmentContainerView
     private lateinit var loginScrollView: ScrollView
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 if (fragmentContainer.isVisible) {
-                    tampilkanFormLogin() // Kembali ke form login
+                    tampilkanFormLogin()
                 } else {
                     finishAffinity()
                 }
@@ -70,12 +76,10 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 
-    // Fungsi public untuk menampilkan form login (bisa dipanggil dari fragment)
     fun tampilkanFormLogin() {
         fragmentContainer.visibility = View.GONE
         loginScrollView.visibility = View.VISIBLE
 
-        // Hapus fragment dari back stack jika ada
         if (supportFragmentManager.backStackEntryCount > 0) {
             supportFragmentManager.popBackStack()
         }
@@ -102,37 +106,36 @@ class LoginActivity : AppCompatActivity() {
         var valid = true
 
         if (email.isEmpty()) {
-            tilEmail.error = "Email tidak boleh kosong"
+            tilEmail.error = getString(R.string.email_empty)
             valid = false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            tilEmail.error = "Format email tidak valid"
+            tilEmail.error = getString(R.string.email_invalid)
             valid = false
         }
 
         if (password.isEmpty()) {
-            tilPassword.error = "Password tidak boleh kosong"
+            tilPassword.error = getString(R.string.password_empty)
             valid = false
         } else if (password.length < 6) {
-            tilPassword.error = "Password minimal 6 karakter"
+            tilPassword.error = getString(R.string.password_min)
             valid = false
         }
 
         if (valid) {
             if (validasiLogin(email, password)) {
-                Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Email atau password salah", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun validasiLogin(email: String, password: String): Boolean {
         // TODO: Implementasi validasi dengan database/API
-        // Untuk sekarang, return true jika password minimal 6 karakter
         return password.length >= 6
     }
 }
