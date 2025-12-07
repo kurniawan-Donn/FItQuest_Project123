@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FitQuest</string>
+
+    <!-- Login & Register -->
+    <string name="login_title">Login Account</string>
+    <string name="register_title">Create New Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login_button">Login</string>
+    <string name="register_button">Register</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+    <string name="have_account">Already have an account? Login</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_mission">Mission</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Home -->
+    <string name="greeting">Hi, Pria</string>
+    <string name="points">Points</string>
+    <string name="daily_target">Daily target: 10 km</string>
+    <string name="daily_target_value">10 km</string>
+    <string name="nav_arrow">Navigation arrow</string>
+    <string name="progress_percentage">%d%%</string>
+    <string name="complete_mission">Complete Your Daily Mission!</string>
+    <string name="run_mission">Run 1 km Mission</string>
+    <string name="reward">Reward: 25 points</string>
+    <string name="start_button">Start</string>
+    <string name="claim_reward">Claim Reward</string>
+    <string name="exchange_point">Exchange Points</string>
+    <string name="voucher">Voucher</string>
+    <string name="discount_10">10% Discount</string>
+    <string name="gift_card">Gift card</string>
+    <string name="price_25k">Rp 25,000</string>
+    <string name="points_100">100 points</string>
+
+    <!-- Profile -->
+    <string name="profile_greeting">Hi, Pria</string> <!-- Tambahkan ini -->
+    <string name="profile_title">Profile</string>
+    <string name="progress_label">% Progress</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="activate_dark_mode">Activate Dark Mode</string>
+    <string name="change_language">Change Language</string>
+    <string name="select_your_language">Select Your Language</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="terms_usage">App Usage Terms</string>
+    <string name="map_type">Map type</string>
+    <string name="map_display">Map Display</string>
+
+    <!-- Mission -->
+    <string name="mission_page">Mission Page</string>
+
+    <!-- Language Dialog -->
+    <string name="select_language">Select Language</string>
+    <string name="language_indonesian">Bahasa Indonesia</string>
+    <string name="language_english">English</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Days of Week -->
+    <string-array name="days_of_week">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <!-- Validation Messages -->
+    <string name="email_empty">Email cannot be empty</string>
+    <string name="email_invalid">Invalid email format</string>
+    <string name="password_empty">Password cannot be empty</string>
+    <string name="password_min">Password minimum 6 characters</string>
+    <string name="name_empty">Full name cannot be empty</string>
+    <string name="name_min">Name minimum 3 characters</string>
+    <string name="confirm_password_empty">Confirm password cannot be empty</string>
+    <string name="password_not_match">Password does not match</string>
+    <string name="login_success">Login successful!</string>
+    <string name="login_failed">Email or password is incorrect</string>
+    <string name="register_success">Registration successful! Please login</string>
+    <string name="register_failed">Registration failed. Email may already be registered</string>
+</resources>

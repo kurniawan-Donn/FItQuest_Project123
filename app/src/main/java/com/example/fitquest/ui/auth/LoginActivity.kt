@@ -1,8 +1,8 @@
-package com.example.fitquest
+package com.example.fitquest.ui.auth
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.widget.ScrollView
 import android.widget.TextView
@@ -10,10 +10,12 @@ import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentContainerView
+import com.example.fitquest.R
+import com.example.fitquest.ui.MainActivity
+import com.example.fitquest.ui.auth.RegisterFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import androidx.appcompat.app.AppCompatDelegate
 
 class LoginActivity : AppCompatActivity() {
 
@@ -30,24 +32,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        initializeViews()
-        setupListeners()
-        setupBackPressedHandler()
+        inisialisasiView()
+        aturPendengar()
+        aturHandlerTombolKembali()
     }
 
-    class LoginActivity : AppCompatActivity() {
-
-        // ... variabel lainnya
-
-        override fun onCreate(savedInstanceState: Bundle?) {
-
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_login)
-
-
-        }
-    }
-    private fun initializeViews() {
+    private fun inisialisasiView() {
         tilEmail = findViewById(R.id.tilEmail)
         tilPassword = findViewById(R.id.tilPassword)
         etEmail = findViewById(R.id.etEmail)
@@ -58,21 +48,21 @@ class LoginActivity : AppCompatActivity() {
         loginScrollView = findViewById(R.id.login_scrollview)
     }
 
-    private fun setupListeners() {
+    private fun aturPendengar() {
         btnLogin.setOnClickListener {
-            handleLogin()
+            prosesLogin()
         }
 
         tvRegisterLink.setOnClickListener {
-            openRegisterFragment()
+            bukaFragmentDaftar()
         }
     }
 
-    private fun setupBackPressedHandler() {
+    private fun aturHandlerTombolKembali() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 if (fragmentContainer.visibility == View.VISIBLE) {
-                    showLoginForm() // Panggil fungsi untuk kembali ke login
+                    tampilkanFormLogin() // Kembali ke form login
                 } else {
                     finishAffinity()
                 }
@@ -81,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // Fungsi public untuk menampilkan form login (bisa dipanggil dari fragment)
-    fun showLoginForm() {
+    fun tampilkanFormLogin() {
         fragmentContainer.visibility = View.GONE
         loginScrollView.visibility = View.VISIBLE
 
@@ -91,44 +81,44 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun openRegisterFragment() {
+    private fun bukaFragmentDaftar() {
         loginScrollView.visibility = View.GONE
         fragmentContainer.visibility = View.VISIBLE
 
-        val registerFragment = RegisterFragment()
+        val fragmentDaftar = RegisterFragment()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, registerFragment)
-            .addToBackStack("register")
+            .replace(R.id.fragment_container, fragmentDaftar)
+            .addToBackStack("daftar")
             .commit()
     }
 
-    private fun handleLogin() {
+    private fun prosesLogin() {
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString().trim()
 
         tilEmail.error = null
         tilPassword.error = null
 
-        var isValid = true
+        var valid = true
 
         if (email.isEmpty()) {
             tilEmail.error = "Email tidak boleh kosong"
-            isValid = false
-        } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            valid = false
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             tilEmail.error = "Format email tidak valid"
-            isValid = false
+            valid = false
         }
 
         if (password.isEmpty()) {
             tilPassword.error = "Password tidak boleh kosong"
-            isValid = false
+            valid = false
         } else if (password.length < 6) {
             tilPassword.error = "Password minimal 6 karakter"
-            isValid = false
+            valid = false
         }
 
-        if (isValid) {
-            if (validateLogin(email, password)) {
+        if (valid) {
+            if (validasiLogin(email, password)) {
                 Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -140,7 +130,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateLogin(email: String, password: String): Boolean {
+    private fun validasiLogin(email: String, password: String): Boolean {
+        // TODO: Implementasi validasi dengan database/API
+        // Untuk sekarang, return true jika password minimal 6 karakter
         return password.length >= 6
     }
 }

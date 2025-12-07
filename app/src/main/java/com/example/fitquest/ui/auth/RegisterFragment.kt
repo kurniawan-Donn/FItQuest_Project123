@@ -1,14 +1,14 @@
-package com.example.fitquest
+package com.example.fitquest.ui.auth
 
-import android.content.Context
 import android.os.Bundle
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import com.example.fitquest.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -59,7 +59,7 @@ class RegisterFragment : Fragment() {
 
         tvLoginLink.setOnClickListener {
             // Panggil fungsi di LoginActivity untuk kembali ke login
-            (requireActivity() as? LoginActivity)?.showLoginForm()
+            (requireActivity() as? LoginActivity)?.tampilkanFormLogin()
         }
     }
 
@@ -87,7 +87,7 @@ class RegisterFragment : Fragment() {
         if (email.isEmpty()) {
             tilEmail.error = "Email tidak boleh kosong"
             isValid = false
-        } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             tilEmail.error = "Format email tidak valid"
             isValid = false
         }
@@ -112,7 +112,7 @@ class RegisterFragment : Fragment() {
             if (registerUser(fullName, email, password)) {
                 Toast.makeText(requireContext(), "Registrasi berhasil! Silakan login", Toast.LENGTH_SHORT).show()
                 // Kembali ke login setelah registrasi berhasil
-                (requireActivity() as? LoginActivity)?.showLoginForm()
+                (requireActivity() as? LoginActivity)?.tampilkanFormLogin()
             } else {
                 Toast.makeText(requireContext(), "Registrasi gagal. Email mungkin sudah terdaftar", Toast.LENGTH_SHORT).show()
             }
