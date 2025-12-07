@@ -50,7 +50,66 @@
     <string name="terms_usage">App Usage Terms</string>
     <string name="map_type">Map type</string>
     <string name="map_display">Map Display</string>
+    <string name="back">icon back left</string>
+    <string name="back_button">Back</string>
+    <string name="terms_content">
+    <![CDATA[
+    <b>FitQuest Application Terms and Conditions</b>\n\n
 
+    <b>1. Acceptance of Terms</b>\n
+    By downloading, installing, or using the FitQuest application, you agree to be bound by these terms and conditions. If you do not agree to these terms and conditions, please do not use this application.\n\n
+
+    <b>2. Service Description</b>\n
+    FitQuest is a fitness tracking application that helps users track sports activities, complete daily missions, and collect points that can be redeemed for rewards.\n\n
+
+    <b>3. User Account</b>\n
+    • You are responsible for maintaining the confidentiality of your account information\n
+    • You are responsible for all activities that occur in your account\n
+    • You must immediately notify us if there is unauthorized use of your account\n\n
+
+    <b>4. Application Usage</b>\n
+    • This application is for personal and non-commercial use only\n
+    • You may not use the application for any illegal purposes\n
+    • You may not attempt to gain unauthorized access to systems or networks connected to the application\n\n
+
+    <b>5. Points and Rewards System</b>\n
+    • Points are earned by completing missions and activities in the application\n
+    • Points can be exchanged for available vouchers or rewards\n
+    • We reserve the right to change point values or rewards at any time\n
+    • Points cannot be transferred or sold\n\n
+
+    <b>6. Privacy and Data</b>\n
+    • We respect your privacy and protect your personal data\n
+    • Location and activity data are collected to improve user experience\n
+    • We will not share your personal data with third parties without your permission\n\n
+
+    <b>7. Service Changes</b>\n
+    • We reserve the right to modify, suspend, or discontinue services at any time\n
+    • We will notify users of significant changes to services\n\n
+
+    <b>8. Limitation of Liability</b>\n
+    • The application is provided "as is" without any warranties\n
+    • We are not responsible for injuries or damages that occur while using the application\n
+    • You use this application at your own risk\n\n
+
+    <b>9. User Content</b>\n
+    • You retain rights to content you upload\n
+    • You grant us a license to use that content in the application\n
+    • You are responsible for content you share\n\n
+
+    <b>10. Termination</b>\n
+    • We reserve the right to suspend or terminate your access if you violate these terms\n
+    • You can stop using the application at any time by deleting your account\n\n
+
+    <b>11. Governing Law</b>\n
+    These terms and conditions are governed by the laws of the Republic of Indonesia.\n\n
+
+    <b>12. Contact Us</b>\n
+    If you have questions about these terms and conditions, please contact us at support@fitquest.com\n\n
+
+    <b>Last updated: December 2024</b>
+    ]]>
+</string>
     <!-- Mission -->
     <string name="mission_page">Mission Page</string>
 

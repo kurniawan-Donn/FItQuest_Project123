@@ -54,7 +54,66 @@
     <string name="terms_usage">Ketentuan Penggunaan Aplikasi</string>
     <string name="map_type">Jenis peta</string>
     <string name="map_display">Tampilan Peta</string>
+    <string name="back">icon kembali kiri</string>
+    <string name="back_button">Kembali</string>
+    <string name="terms_content">
+    <![CDATA[
+    <b>Syarat dan Ketentuan Penggunaan Aplikasi FitQuest</b>\n\n
 
+    <b>1. Penerimaan Syarat</b>\n
+    Dengan mengunduh, menginstal, atau menggunakan aplikasi FitQuest, Anda menyetujui untuk terikat oleh syarat dan ketentuan ini. Jika Anda tidak setuju dengan syarat dan ketentuan ini, harap jangan menggunakan aplikasi ini.\n\n
+
+    <b>2. Deskripsi Layanan</b>\n
+    FitQuest adalah aplikasi fitness tracking yang membantu pengguna melacak aktivitas olahraga, menyelesaikan misi harian, dan mengumpulkan poin yang dapat ditukarkan dengan hadiah.\n\n
+
+    <b>3. Akun Pengguna</b>\n
+    • Anda bertanggung jawab untuk menjaga kerahasiaan informasi akun Anda\n
+    • Anda bertanggung jawab atas semua aktivitas yang terjadi di akun Anda\n
+    • Anda harus segera memberi tahu kami jika ada penggunaan tidak sah atas akun Anda\n\n
+
+    <b>4. Penggunaan Aplikasi</b>\n
+    • Aplikasi ini hanya untuk penggunaan pribadi dan non-komersial\n
+    • Anda tidak boleh menggunakan aplikasi untuk tujuan yang melanggar hukum\n
+    • Anda tidak boleh mencoba mengakses sistem atau jaringan yang terhubung dengan aplikasi secara tidak sah\n\n
+
+    <b>5. Sistem Poin dan Hadiah</b>\n
+    • Poin diperoleh dengan menyelesaikan misi dan aktivitas dalam aplikasi\n
+    • Poin dapat ditukarkan dengan voucher atau hadiah yang tersedia\n
+    • Kami berhak mengubah nilai poin atau hadiah sewaktu-waktu\n
+    • Poin tidak dapat dipindahtangankan atau dijual\n\n
+
+    <b>6. Privasi dan Data</b>\n
+    • Kami menghormati privasi Anda dan melindungi data pribadi Anda\n
+    • Data lokasi dan aktivitas dikumpulkan untuk meningkatkan pengalaman pengguna\n
+    • Kami tidak akan membagikan data pribadi Anda kepada pihak ketiga tanpa izin Anda\n\n
+
+    <b>7. Perubahan Layanan</b>\n
+    • Kami berhak mengubah, menangguhkan, atau menghentikan layanan kapan saja\n
+    • Kami akan memberitahu pengguna tentang perubahan signifikan pada layanan\n\n
+
+    <b>8. Batasan Tanggung Jawab</b>\n
+    • Aplikasi disediakan "sebagaimana adanya" tanpa jaminan apapun\n
+    • Kami tidak bertanggung jawab atas cedera atau kerusakan yang terjadi saat menggunakan aplikasi\n
+    • Anda menggunakan aplikasi ini dengan risiko Anda sendiri\n\n
+
+    <b>9. Konten Pengguna</b>\n
+    • Anda mempertahankan hak atas konten yang Anda unggah\n
+    • Anda memberikan kami lisensi untuk menggunakan konten tersebut dalam aplikasi\n
+    • Anda bertanggung jawab atas konten yang Anda bagikan\n\n
+
+    <b>10. Pemutusan</b>\n
+    • Kami berhak menangguhkan atau mengakhiri akses Anda jika Anda melanggar syarat ini\n
+    • Anda dapat menghentikan penggunaan aplikasi kapan saja dengan menghapus akun Anda\n\n
+
+    <b>11. Hukum yang Berlaku</b>\n
+    Syarat dan ketentuan ini diatur oleh hukum Republik Indonesia.\n\n
+
+    <b>12. Hubungi Kami</b>\n
+    Jika Anda memiliki pertanyaan tentang syarat dan ketentuan ini, silakan hubungi kami di support@fitquest.com\n\n
+
+    <b>Terakhir diperbarui: Desember 2024</b>
+    ]]>
+</string>
     <!-- Mission -->
     <string name="mission_page">Halaman Mission</string>
 
