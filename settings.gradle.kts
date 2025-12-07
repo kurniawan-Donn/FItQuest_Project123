@@ -15,5 +15,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SmartGate"
+rootProject.name = "Fitquest"
 include(":app")

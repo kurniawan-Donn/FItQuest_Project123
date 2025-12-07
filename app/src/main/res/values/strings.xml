@@ -1,8 +1,91 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">FitQuest</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Login & Register -->
+    <string name="login_title">Masuk Akun</string>
+    <string name="register_title">Buat Akun Baru</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="login_button">Masuk</string>
+    <string name="register_button">Daftar Masuk</string>
+    <string name="no_account">Belum punya akun? Daftar</string>
+    <string name="have_account">Sudah punya akun? Masuk</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_mission">Mission</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Home -->
+    <string name="greeting">Hi, Pria</string>
+    <string name="points">0 Poin</string>
+    <string name="daily_target" tools:ignore="StringFormat">Target harian: %s</string>
+    <string name="nav_arrow">Panah Navigasi</string>
+    <string name="daily_target_value">10 km</string>
+    <string name="progress_percentage">%d%%</string>
+    <string name="complete_mission">Selesaikan Misi Harinmu!</string>
+    <string name="run_mission">Misi Lari 1 km</string>
+    <string name="reward">Hadiah: 25 poin</string>
+    <string name="start_button">Mulai</string>
+    <string name="claim_reward">Pengambilan hadiah</string>
+    <string name="exchange_point">Pertukaran poin</string>
+    <string name="voucher">Voucher</string>
+    <string name="discount_10">10% Diskon</string>
+    <string name="gift_card">Kartu hadiah</string>
+    <string name="price_25k">Rp 25.000</string>
+    <string name="points_100">100 poin</string>
+
+    Dengan perubahan ini, kode Anda menjadi lebih **terstruktur**, **mudah dipelihara**, dan **siap untuk lokalisasi** (jika nanti dibutuhkan) dengan menggunakan *string resource* di semua elemen teks statis pada layout.
+
+    Apakah Anda ingin saya membuatkan *stub* fungsi navigasi di `HomeFragment.kt` menggunakan `findNavController()`?
+
+    <!-- Profile -->
+    <string name="profile_title">Profil</string>
+    <string name="profile_greeting">Hi, Pria</string> <!-- Tambahkan ini -->
+    <string name="progress_label">% Progres</string>
+    <string name="dark_mode">Modus gelap</string>
+    <string name="activate_dark_mode">Aktifkan Mode Gelap</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="select_your_language">Pilih Bahasa Anda</string>
+    <string name="terms_conditions">Syarat &amp; Ketentuan</string>
+    <string name="terms_usage">Ketentuan Penggunaan Aplikasi</string>
+    <string name="map_type">Jenis peta</string>
+    <string name="map_display">Tampilan Peta</string>
+
+    <!-- Mission -->
+    <string name="mission_page">Halaman Mission</string>
+
+    <!-- Language Dialog -->
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="language_indonesian">Bahasa Indonesia</string>
+    <string name="language_english">English</string>
+    <string name="cancel">Batal</string>
+
+    <!-- Days of Week -->
+    <string-array name="days_of_week">
+        <item>Senin</item>
+        <item>Selasa</item>
+        <item>Rabu</item>
+        <item>Kamis</item>
+        <item>Jumat</item>
+        <item>Sabtu</item>
+        <item>Minggu</item>
+    </string-array>
+
+    <!-- Validation Messages -->
+    <string name="email_empty">Email tidak boleh kosong</string>
+    <string name="email_invalid">Format email tidak valid</string>
+    <string name="password_empty">Password tidak boleh kosong</string>
+    <string name="password_min">Password minimal 6 karakter</string>
+    <string name="name_empty">Nama lengkap tidak boleh kosong</string>
+    <string name="name_min">Nama minimal 3 karakter</string>
+    <string name="confirm_password_empty">Konfirmasi password tidak boleh kosong</string>
+    <string name="password_not_match">Password tidak cocok</string>
+    <string name="login_success">Login berhasil!</string>
+    <string name="login_failed">Email atau password salah</string>
+    <string name="register_success">Registrasi berhasil! Silakan login</string>
+    <string name="register_failed">Registrasi gagal. Email mungkin sudah terdaftar</string>
 </resources>
