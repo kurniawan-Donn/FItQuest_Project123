@@ -137,13 +137,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:layout_marginBottom="16dp"
-                        android:backgroundTint="#00A3FF"
+                        android:backgroundTint="?attr/colorPrimary"
                         android:text="Masuk"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textSize="18sp"
+                        android:fontFamily="@font/intermedium"
                         app:cornerRadius="12dp"
-                        app:strokeColor="#3CFB06"
+                        app:rippleColor="?attr/colorOnPrimary"
+                        app:strokeColor="#3cfb06"
                         app:strokeWidth="1dp"/>
+
 
                     <!-- Register Link -->
                     <TextView
