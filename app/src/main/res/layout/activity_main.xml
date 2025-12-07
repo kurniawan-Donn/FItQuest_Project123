@@ -64,18 +64,11 @@
         app:layout_constraintTop_toTopOf="@id/tvGreeting"
         app:layout_constraintBottom_toBottomOf="@id/tvGreeting">
 
-        <ImageView
-            android:id="@+id/ivCoin"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_coin"
-            android:layout_marginEnd="8dp"/>
-
         <TextView
             android:id="@+id/tvPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2500 Point"
+            android:text="0 Point"
             android:textSize="20sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
@@ -180,7 +173,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/progressBackground"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="25dp"
                                 android:text="Target harian: 10 km"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp" />

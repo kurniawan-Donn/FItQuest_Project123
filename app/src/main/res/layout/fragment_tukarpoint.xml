@@ -16,9 +16,8 @@
             android:layout_height="34dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="19dp"
-            android:padding="0dp"
             android:scaleType="centerInside"
-            android:src="@drawable/icarrowleft"
+            android:src="@drawable/ic_arrowleft"
             android:background="@drawable/ripplebutton"/>
         <TextView
             android:layout_width="180dp"
@@ -55,9 +54,9 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/interbold"
                 android:text="Point Kamu:"
-                android:textColor="#000000"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="20sp" />
-            
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -106,7 +105,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Penukaran"
                 android:fontFamily="@font/intersemibold"
-                android:textColor="#000000"/>
+                android:textColor="?attr/colorOnSurface"/>
 
             <LinearLayout
                 android:id="@+id/btn_lihat_lainnya"
@@ -124,7 +123,7 @@
                     android:gravity="center"
                     android:fontFamily="@font/interlight"
                     android:text="Lihat Lainnya"
-                    android:textColor="#777777"
+                    android:textColor="?attr/colorOnSurfaceVariant"
                     android:textSize="19sp" />
 
                 <ImageView
@@ -150,7 +149,7 @@
                     app:cardCornerRadius="10dp"
                     app:strokeColor="#009AD2"
                     app:strokeWidth="3dp">
-                    
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -196,7 +195,7 @@
                             android:paddingRight="5dp"
                             android:paddingTop="5dp"
                             android:text="Diskon 10% semua produk di shopeefood"
-                            android:textColor="#132719"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="15sp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/leftSection" />
@@ -296,7 +295,7 @@
                             android:text="Voucher Kopi di Toko Kopi Kenangan"
                             android:textSize="15sp"
                             android:fontFamily="@font/intermedium"
-                            android:textColor="#132719"
+                            android:textColor="?attr/colorOnSurface"
                             android:paddingTop="5dp"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
@@ -400,7 +399,7 @@
                             android:text="Giftcard pembelian 25rb"
                             android:textSize="15sp"
                             android:fontFamily="@font/intermedium"
-                            android:textColor="#132719"
+                            android:textColor="?attr/colorOnSurface"
                             android:paddingTop="5dp"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
@@ -501,7 +500,7 @@
                                 android:text="Voucher Pulsa 50rb"
                                 android:textSize="15sp"
                                 android:fontFamily="@font/intermedium"
-                                android:textColor="#132719"
+                                android:textColor="?attr/colorOnSurface"
                                 android:paddingTop="5dp"
                                 android:paddingLeft="5dp"
                                 android:paddingRight="5dp"
@@ -510,7 +509,7 @@
                                 app:layout_constraintStart_toStartOf="@+id/leftSection4"
                                 />
                             <RelativeLayout
-                               
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="28dp"
                                 android:layout_marginStart="3dp"
