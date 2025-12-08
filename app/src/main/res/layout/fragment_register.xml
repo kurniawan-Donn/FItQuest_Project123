@@ -70,7 +70,7 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
-                <!-- Full Name Input -->
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilFullName"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
