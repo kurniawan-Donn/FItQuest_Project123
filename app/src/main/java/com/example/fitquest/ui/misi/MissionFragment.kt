@@ -110,7 +110,7 @@ class MissionFragment : Fragment() {
         }
 
         // Navigasi ke StartMissionFragment menggunakan action
-        findNavController().navigate(R.id.action_misiFragment_to_startMissionFragment)
+        //findNavController().navigate(R.id.action_misiFragment_to_MulaiMissionFragment)
     }
 
     override fun onDestroyView() {
