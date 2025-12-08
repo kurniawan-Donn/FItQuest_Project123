@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface">
 
-    <!-- Header Section -->
+
     <RelativeLayout
         android:id="@+id/headermisi"
         android:layout_width="match_parent"

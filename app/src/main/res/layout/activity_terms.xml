@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:textColor="?attr/colorOnPrimary">
 
-    <!-- Header (Tetap/Fixed di atas) -->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Area Konten yang bisa di-scroll -->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- White Card Content -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
@@ -83,8 +83,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Tombol Kembali (Fixed di bawah atau mau ikut scroll?
-         Di sini saya buat fixed di bagian bawah layar agar selalu terlihat) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface">
 
-    <!-- Header Background -->
+
     <View
         android:id="@+id/latarBelakangHeader"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Logo Icon -->
+
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="60dp"
@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Nama Aplikasi -->
+
     <TextView
         android:id="@+id/tvNamaAplikasi"
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="@id/ivLogo"
         app:layout_constraintBottom_toBottomOf="@id/ivLogo"/>
 
-    <!-- Teks Sapaan -->
+
     <TextView
         android:id="@+id/tvSapaan"
         android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="@id/ivLogo"
         app:layout_constraintTop_toBottomOf="@id/ivLogo"/>
 
-    <!-- Badge Poin -->
+
     <LinearLayout
         android:id="@+id/layoutPoin"
         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <!-- ScrollView untuk konten -->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                 android:clipToPadding="false"
                 android:baselineAligned="false">
 
-                <!-- Kartu Progres Lingkaran -->
+
                 <FrameLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -129,7 +129,7 @@
                             android:gravity="center"
                             android:padding="16dp">
 
-                            <!-- Latar Belakang Progres Lingkaran -->
+
                             <ProgressBar
                                 android:id="@+id/latarBelakangProgres"
                                 style="?android:attr/progressBarStyleHorizontal"
@@ -152,7 +152,7 @@
                                 app:indicatorColor="#001594"
                                 app:trackCornerRadius="6dp" />
 
-                            <!-- Teks Persentase -->
+
                             <TextView
                                 android:id="@+id/tvPersentaseProgres"
                                 android:layout_width="wrap_content"

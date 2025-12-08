@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Header Background -->
+
         <View
             android:id="@+id/headerBackground"
             android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Logo FitQuest -->
+
         <TextView
             android:id="@+id/tvLogo"
             android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Card Container -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardRegister"
             android:layout_width="match_parent"
@@ -58,7 +58,7 @@
                 android:background="#FFFFFF"
                 android:padding="30dp">
 
-                <!-- Title -->
+
                 <TextView
                     android:id="@+id/tvTitle"
                     android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <!-- Email Input -->
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilEmail"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -128,7 +128,7 @@
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Password Input -->
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilPassword"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -159,7 +159,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <!-- Confirm Password Input -->
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilConfirmPassword"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -193,7 +193,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <!-- Register Button -->
+
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnRegister"
                     android:layout_width="match_parent"
@@ -208,7 +208,7 @@
                     app:strokeColor="#3CFB06"
                     app:strokeWidth="1dp" />
 
-                <!-- Login Link -->
+
                 <TextView
                     android:id="@+id/tvLoginLink"
                     android:layout_width="wrap_content"

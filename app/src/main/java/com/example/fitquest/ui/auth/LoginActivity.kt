@@ -135,7 +135,7 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun validasiLogin(email: String, password: String): Boolean {
-        // TODO: Implementasi validasi dengan database/API
+
         return password.length >= 6
     }
 }

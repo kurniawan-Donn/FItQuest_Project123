@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#DCDCDC">
 
-    <!-- ScrollView untuk Login Form -->
+
     <ScrollView
         android:id="@+id/login_scrollview"
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <!-- Logo FitQuest -->
+
             <TextView
                 android:id="@+id/tvLogo"
                 android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <!-- Card Container -->
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardLogin"
                 android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                     android:background="#FFFFFF"
                     android:padding="32dp">
 
-                    <!-- Title -->
+
                     <TextView
                         android:id="@+id/tvTitle"
                         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
-                    <!-- Email Input -->
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/tilEmail"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -131,7 +131,7 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Login Button -->
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
@@ -148,7 +148,7 @@
                         app:strokeWidth="1dp"/>
 
 
-                    <!-- Register Link -->
+
                     <TextView
                         android:id="@+id/tvRegisterLink"
                         android:layout_width="wrap_content"
@@ -167,7 +167,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <!-- Fragment Container untuk RegisterFragment (Awalnya tersembunyi) -->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
