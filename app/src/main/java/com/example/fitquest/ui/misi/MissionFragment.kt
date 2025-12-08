@@ -27,7 +27,6 @@ class MissionFragment : Fragment() {
     }
 
     private fun aturUI() {
-        // TODO: Tambahkan logika untuk menampilkan daftar misi
         binding.tvJudulMisi.text = "Misi"
         binding.tvDeskripsiMisi.text = "Halaman Misi"
     }
