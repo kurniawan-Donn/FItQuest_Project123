@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@id/headerBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/startButtonContainer">
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer">
 
         <!-- Stats Card Container -->
         <com.google.android.material.card.MaterialCardView
@@ -240,71 +240,67 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
-            <!-- Google Map Fragment -->
-            <fragment
-                android:id="@+id/mapFragment"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
+            <!-- MapLibre MapView -->
+            <org.maplibre.android.maps.MapView
+                android:id="@+id/mapView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <!-- Stepper Controls (on top of map) -->
+            <!-- Keep your existing zoom controls ConstraintLayout here -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/stepperControls"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <!-- Zoom In Button -->
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/zoomInButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:layout_marginTop="84dp"
-                    android:layout_marginEnd="132dp"
-                    android:src="@drawable/ic_add"
-                    app:backgroundTint="?attr/colorSurface"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-                <!-- Zoom Out Button -->
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/zoomOutButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_remove"
-                    app:backgroundTint="?attr/colorSurface"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/zoomInButton" />
-
-
-
-
+                <!-- ... your existing Zoom In/Out FABs ... -->
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Start Button Container (Fixed at bottom) -->
+    <!-- Button Container (Fixed at bottom) -->
     <LinearLayout
-        android:id="@+id/startButtonContainer"
+        android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:gravity="center"
         android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Tombol Stop/Selesai -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/startButton"
-            android:layout_width="match_parent"
+            android:id="@+id/stopButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="SELESAI"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="50dp"
+            app:backgroundTint="?attr/colorError" />
+
+        <!-- Tombol Start/Pause (Toggle) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startPauseButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:text="MULAI"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:cornerRadius="50dp"/>
+            app:cornerRadius="50dp"
+            app:backgroundTint="?attr/colorPrimary" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

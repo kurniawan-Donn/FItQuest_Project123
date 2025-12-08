@@ -38,8 +38,26 @@
     <string name="price_25k">Rp 25,000</string>
     <string name="points_100">100 points</string>
 
+    <!-- Tukar Point -->
+    <string name="tukar_point_title">Tukar Point</string>
+    <string name="point_kamu">Point Kamu:</string>
+    <string name="penukaran">Penukaran</string>
+    <string name="lihat_lainnya">Lihat Lainnya</string>
+    <string name="tukar">Tukar</string>
+    <string name="diskon_shopee">Diskon 10%% semua produk di shopeefood</string>
+    <string name="voucher_kopi">Voucher Kopi di Toko Kopi Kenangan</string>
+    <string name="giftcard_25k">Giftcard pembelian 25rb</string>
+    <string name="voucher_pulsa">Voucher Pulsa 50rb</string>
+    <string name="konfirmasi_tukar">Konfirmasi Penukaran</string>
+    <string name="pesan_konfirmasi">Apakah Anda yakin ingin menukar %d poin untuk %s?</string>
+    <string name="ya_tukar">Ya, Tukar</string>
+    <string name="batal">Batal</string>
+    <string name="poin_tidak_cukup">Poin tidak cukup!</string>
+    <string name="penukaran_berhasil">Penukaran berhasil!</string>
+    <string name="penukaran_gagal">Penukaran gagal. Silakan coba lagi.</string>
+
     <!-- Profile -->
-    <string name="profile_greeting">Hi, Pria</string> <!-- Tambahkan ini -->
+    <string name="profile_greeting">Hi, Pria</string>
     <string name="profile_title">Profile</string>
     <string name="progress_label">% Progress</string>
     <string name="dark_mode">Dark mode</string>
@@ -47,44 +65,71 @@
     <string name="change_language">Change Language</string>
     <string name="select_your_language">Select Your Language</string>
     <string name="terms_conditions">Terms &amp; Conditions</string>
-    <string name="terms_usage">App Usage Terms</string>
+    <string name="terms_usage1">App Usage Terms</string>
     <string name="map_type">Map type</string>
     <string name="map_display">Map Display</string>
     <string name="back">icon back left</string>
     <string name="back_button">Back</string>
-    <string name="terms_content">
-    <string name="terms_usage_en">
-    <![CDATA[
-    <b>FITQUEST APPLICATION: SUMMARY TERMS AND CONDITIONS</b><br/><br/>
 
-    By using the <b>FitQuest</b> application, you are deemed to have automatically <b>agreed, understood, and consented</b> to comply with the following Summary Terms & Conditions and our Privacy Policy:<br/><br/>
+    <!-- Terms Content -->
+    <string name="terms_content"><![CDATA[
+        <b>FITQUEST APPLICATION: SUMMARY TERMS AND CONDITIONS</b><br/><br/>
 
-    <b>1. BINDING AGREEMENT</b><br/>
-    Your continued use implies absolute acceptance of these Terms and our <b><a href="https://google.com">Privacy Policy</a></b>. Any update to these documents shall be immediately binding.<br/><br/>
+        By using the <b>FitQuest</b> application, you are deemed to have automatically <b>agreed, understood, and consented</b> to comply with the following Summary Terms & Conditions and our Privacy Policy:<br/><br/>
 
-    <b>2. ACCOUNT AND SECURITY</b><br/>
-    You bear full responsibility for the <b>confidentiality</b> of your account <i>username</i> and <i>password</i>. You must ensure all registration information is <b>accurate and kept current</b>.<br/><br/>
+        <b>1. BINDING AGREEMENT</b><br/>
+        Your continued use implies absolute acceptance of these Terms and our <b><a href="https://google.com">Privacy Policy</a></b>. Any update to these documents shall be immediately binding.<br/><br/>
 
-    <b>3. USER DATA AND PRIVACY</b><br/>
-    We collect and process your <b>running activity, location, and personal data</b> strictly to provide and enhance the FitQuest service. Your data usage rights are detailed in our <b><a href="https://google.com">Privacy Policy</a></b>.<br/><br/>
+        <b>2. ACCOUNT AND SECURITY</b><br/>
+        You bear full responsibility for the <b>confidentiality</b> of your account <i>username</i> and <i>password</i>. You must ensure all registration information is <b>accurate and kept current</b>.<br/><br/>
 
-    <b>4. DISCLAIMER OF RESPONSIBILITY</b><br/>
-    FitQuest is solely a <b>fitness monitoring tool</b>. We <b>assume no liability</b> for any injuries, health issues, or fitness outcomes achieved. <b>Crucial: Always consult a healthcare professional before starting or changing any exercise routine.</b><br/><br/>
+        <b>3. USER DATA AND PRIVACY</b><br/>
+        We collect and process your <b>running activity, location, and personal data</b> strictly to provide and enhance the FitQuest service. Your data usage rights are detailed in our <b><a href="https://google.com">Privacy Policy</a></b>.<br/><br/>
 
-    <b>5. INTELLECTUAL PROPERTY RIGHTS (IPR)</b><br/>
-    The entire application, including source code, interface design, and the <b>FitQuest</b> logo, is our exclusive property and is protected by IPR laws. You are strictly prohibited from copying, modifying, reverse-engineering, or distributing this content without prior written consent.<br/><br/>
+        <b>4. DISCLAIMER OF RESPONSIBILITY</b><br/>
+        FitQuest is solely a <b>fitness monitoring tool</b>. We <b>assume no liability</b> for any injuries, health issues, or fitness outcomes achieved. <b>Crucial: Always consult a healthcare professional before starting or changing any exercise routine.</b><br/><br/>
 
-    <b>6. GOVERNING LAW</b><br/>
-    These Terms and Conditions shall be governed by the laws of the <b>Republic of Indonesia</b>.<br/><br/>
+        <b>5. INTELLECTUAL PROPERTY RIGHTS (IPR)</b><br/>
+        The entire application, including source code, interface design, and the <b>FitQuest</b> logo, is our exclusive property and is protected by IPR laws. You are strictly prohibited from copying, modifying, reverse-engineering, or distributing this content without prior written consent.<br/><br/>
 
-    <b>7. CONTACT POINT</b><br/>
-    For any official inquiries, support, or complaints, please contact our team via email at <b>[NichoNichoni143@gmail.com]</b>.<br/><br/>
+        <b>6. GOVERNING LAW</b><br/>
+        These Terms and Conditions shall be governed by the laws of the <b>Republic of Indonesia</b>.<br/><br/>
 
-    Thank you for choosing and embarking on this adventure with <b>FitQuest</b>!
-    ]]>
-</string>
+        <b>7. CONTACT POINT</b><br/>
+        For any official inquiries, support, or complaints, please contact our team via email at <b>NichoNichoni143@gmail.com</b>.<br/><br/>
 
-</string>
+        Thank you for choosing and embarking on this adventure with <b>FitQuest</b>!
+    ]]></string>
+
+    <string name="terms_usage"><![CDATA[
+        <b>FITQUEST APPLICATION: SUMMARY TERMS AND CONDITIONS</b><br/><br/>
+
+        By using the <b>FitQuest</b> application, you are deemed to have automatically <b>agreed, understood, and consented</b> to comply with the following Summary Terms & Conditions and our Privacy Policy:<br/><br/>
+
+        <b>1. BINDING AGREEMENT</b><br/>
+        Your continued use implies absolute acceptance of these Terms and our <b><a href="https://google.com">Privacy Policy</a></b>. Any update to these documents shall be immediately binding.<br/><br/>
+
+        <b>2. ACCOUNT AND SECURITY</b><br/>
+        You bear full responsibility for the <b>confidentiality</b> of your account <i>username</i> and <i>password</i>. You must ensure all registration information is <b>accurate and kept current</b>.<br/><br/>
+
+        <b>3. USER DATA AND PRIVACY</b><br/>
+        We collect and process your <b>running activity, location, and personal data</b> strictly to provide and enhance the FitQuest service. Your data usage rights are detailed in our <b><a href="https://google.com">Privacy Policy</a></b>.<br/><br/>
+
+        <b>4. DISCLAIMER OF RESPONSIBILITY</b><br/>
+        FitQuest is solely a <b>fitness monitoring tool</b>. We <b>assume no liability</b> for any injuries, health issues, or fitness outcomes achieved. <b>Crucial: Always consult a healthcare professional before starting or changing any exercise routine.</b><br/><br/>
+
+        <b>5. INTELLECTUAL PROPERTY RIGHTS (IPR)</b><br/>
+        The entire application, including source code, interface design, and the <b>FitQuest</b> logo, is our exclusive property and is protected by IPR laws. You are strictly prohibited from copying, modifying, reverse-engineering, or distributing this content without prior written consent.<br/><br/>
+
+        <b>6. GOVERNING LAW</b><br/>
+        These Terms and Conditions shall be governed by the laws of the <b>Republic of Indonesia</b>.<br/><br/>
+
+        <b>7. CONTACT POINT</b><br/>
+        For any official inquiries, support, or complaints, please contact our team via email at <b>NichoNichoni143@gmail.com</b>.<br/><br/>
+
+        Thank you for choosing and embarking on this adventure with <b>FitQuest</b>!
+    ]]></string>
+
     <!-- Mission -->
     <string name="mission_page">Mission Page</string>
 

@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.fitquest.databinding.FragmentBerandaBinding
+import com.example.fitquest.R
 
 class HomeFragment : Fragment() {
 
@@ -30,11 +32,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun aturUI() {
-        // Atur data statis (nanti bisa diganti dengan data dinamis)
-        binding.tvSapaan.text = "Hi, Pria"
+        // Gunakan string resource
+        binding.tvSapaan.text = getString(R.string.greeting)
         binding.tvPoin.text = "0 Poin"
         binding.tvPersentaseProgres.text = "65%"
-        binding.tvTargetHarian.text = "Target harian: 10 km"
+        binding.tvTargetHarian.text = "Target harian 10km"
     }
 
     private fun aturPendengarKlik() {
@@ -47,7 +49,8 @@ class HomeFragment : Fragment() {
         }
 
         binding.tukarPoin.setOnClickListener {
-            // TODO: Navigasi ke halaman tukar poin
+            // Navigasi ke TukarPointFragment
+            navigasiKeTukarPoint()
         }
 
         binding.voucherDiskon.setOnClickListener {
@@ -57,6 +60,11 @@ class HomeFragment : Fragment() {
         binding.kartuHadiah.setOnClickListener {
             // TODO: Navigasi ke halaman kartu hadiah
         }
+    }
+
+    private fun navigasiKeTukarPoint() {
+        // Gunakan Navigation Component untuk navigasi
+        findNavController().navigate(R.id.tukarPointFragment)
     }
 
     private fun aturIndikatorProgres() {

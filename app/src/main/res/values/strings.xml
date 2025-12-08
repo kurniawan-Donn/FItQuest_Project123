@@ -38,57 +38,98 @@
     <string name="price_25k">Rp 25.000</string>
     <string name="points_100">100 poin</string>
 
-    Dengan perubahan ini, kode Anda menjadi lebih **terstruktur**, **mudah dipelihara**, dan **siap untuk lokalisasi** (jika nanti dibutuhkan) dengan menggunakan *string resource* di semua elemen teks statis pada layout.
-
-    Apakah Anda ingin saya membuatkan *stub* fungsi navigasi di `HomeFragment.kt` menggunakan `findNavController()`?
+    <!-- Tukar Point -->
+    <string name="tukar_point_title">Tukar Point</string>
+    <string name="point_kamu">Point Kamu:</string>
+    <string name="penukaran">Penukaran</string>
+    <string name="lihat_lainnya">Lihat Lainnya</string>
+    <string name="tukar">Tukar</string>
+    <string name="diskon_shopee">Diskon 10%% semua produk di shopeefood</string>
+    <string name="voucher_kopi">Voucher Kopi di Toko Kopi Kenangan</string>
+    <string name="giftcard_25k">Giftcard pembelian 25rb</string>
+    <string name="voucher_pulsa">Voucher Pulsa 50rb</string>
+    <string name="konfirmasi_tukar">Konfirmasi Penukaran</string>
+    <string name="pesan_konfirmasi">Apakah Anda yakin ingin menukar %d poin untuk %s?</string>
+    <string name="ya_tukar">Ya, Tukar</string>
+    <string name="batal">Batal</string>
+    <string name="poin_tidak_cukup">Poin tidak cukup!</string>
+    <string name="penukaran_berhasil">Penukaran berhasil!</string>
+    <string name="penukaran_gagal">Penukaran gagal. Silakan coba lagi.</string>
 
     <!-- Profile -->
     <string name="profile_title">Profil</string>
-    <string name="profile_greeting">Hi, Pria</string> <!-- Tambahkan ini -->
+    <string name="profile_greeting">Hi, Pria</string>
     <string name="progress_label">% Progres</string>
     <string name="dark_mode">Modus gelap</string>
     <string name="activate_dark_mode">Aktifkan Mode Gelap</string>
     <string name="change_language">Ubah Bahasa</string>
     <string name="select_your_language">Pilih Bahasa Anda</string>
     <string name="terms_conditions">Syarat &amp; Ketentuan</string>
-    <string name="terms_usage">Ketentuan Penggunaan Aplikasi</string>
+    <string name="terms_usage1">Ketentuan Penggunaan Aplikasi</string>
     <string name="map_type">Jenis peta</string>
     <string name="map_display">Tampilan Peta</string>
     <string name="back">icon kembali kiri</string>
     <string name="back_button">Kembali</string>
-    <string name="terms_content">
-       <string name="terms_usage">
-    <![CDATA[
-    <b>SYARAT DAN KETENTUAN PENGGUNAAN FITQUEST</b><br/><br/>
 
-    Dengan menggunakan aplikasi <b>FitQuest</b>, Anda secara otomatis <b>menyetujui, memahami, dan tunduk</b> pada seluruh Syarat & Ketentuan dan Kebijakan Privasi di bawah ini:<br/><br/>
+    <!-- Terms Content -->
+        <string name="terms_content"><![CDATA[
+        <b>SYARAT DAN KETENTUAN PENGGUNAAN FITQUEST</b><br/><br/>
 
-    <b>1. PERSETUJUAN PENGGUNAAN</b><br/>
-    Penggunaan layanan FitQuest menyiratkan persetujuan mutlak Anda terhadap dokumen ini dan <b><a href="https://google.com">Kebijakan Privasi kami</a></b>. Kelanjutan penggunaan Anda dianggap sebagai penerimaan atas setiap pembaruan syarat.<br/><br/>
+        Dengan menggunakan aplikasi <b>FitQuest</b>, Anda secara otomatis <b>menyetujui, memahami, dan tunduk</b> pada seluruh Syarat & Ketentuan dan Kebijakan Privasi di bawah ini:<br/><br/>
 
-    <b>2. AKUN & KEAMANAN DATA</b><br/>
-    Anda bertanggung jawab penuh atas <b>kerahasiaan</b> <i>username</i> dan <i>password</i>. Anda wajib memastikan semua informasi pendaftaran (termasuk alamat email dan data pribadi) adalah <b>akurat dan terkini</b>.<br/><br/>
+        <b>1. PERSETUJUAN PENGGUNAAN</b><br/>
+        Penggunaan layanan FitQuest menyiratkan persetujuan mutlak Anda terhadap dokumen ini dan <b><a href="https://google.com">Kebijakan Privasi kami</a></b>. Kelanjutan penggunaan Anda dianggap sebagai penerimaan atas setiap pembaruan syarat.<br/><br/>
 
-    <b>3. PENGGUNAAN DATA & PRIVASI</b><br/>
-    Kami mengumpulkan dan memproses <b>data aktivitas lari, lokasi, dan informasi pribadi</b> Anda semata-mata untuk menyediakan dan meningkatkan kualitas layanan FitQuest. Detail dan hak Anda terkait penggunaan data diatur sepenuhnya dalam <b><a href="https://google.com">Kebijakan Privasi</a></b> kami.<br/><br/>
+        <b>2. AKUN & KEAMANAN DATA</b><br/>
+        Anda bertanggung jawab penuh atas <b>kerahasiaan</b> <i>username</i> dan <i>password</i>. Anda wajib memastikan semua informasi pendaftaran (termasuk alamat email dan data pribadi) adalah <b>akurat dan terkini</b>.<br/><br/>
 
-    <b>4. PENOLAKAN TANGGUNG JAWAB (DISCLAIMER)</b><br/>
-    FitQuest hanyalah <b>alat bantu pemantauan kebugaran</b>. Kami <b>tidak bertanggung jawab</b> atas cedera, masalah kesehatan, atau hasil kebugaran yang Anda capai. <b>Penting: Selalu konsultasikan kondisi kesehatan dan rutinitas olahraga Anda dengan tenaga medis profesional.</b><br/><br/>
+        <b>3. PENGGUNAAN DATA & PRIVASI</b><br/>
+        Kami mengumpulkan dan memproses <b>data aktivitas lari, lokasi, dan informasi pribadi</b> Anda semata-mata untuk menyediakan dan meningkatkan kualitas layanan FitQuest. Detail dan hak Anda terkait penggunaan data diatur sepenuhnya dalam <b><a href="https://google.com">Kebijakan Privasi</a></b> kami.<br/><br/>
 
-    <b>5. HAK KEKAYAAN INTELEKTUAL (HKI)</b><br/>
-    Seluruh elemen aplikasi, termasuk kode sumber, desain antarmuka, dan logo <b>FitQuest</b>, adalah milik eksklusif kami dan dilindungi oleh undang-undang HKI. Anda dilarang keras menyalin, memodifikasi, merekayasa ulang, atau mendistribusikan konten ini tanpa izin tertulis.<br/><br/>
+        <b>4. PENOLAKAN TANGGUNG JAWAB (DISCLAIMER)</b><br/>
+        FitQuest hanyalah <b>alat bantu pemantauan kebugaran</b>. Kami <b>tidak bertanggung jawab</b> atas cedera, masalah kesehatan, atau hasil kebugaran yang Anda capai. <b>Penting: Selalu konsultasikan kondisi kesehatan dan rutinitas olahraga Anda dengan tenaga medis profesional.</b><br/><br/>
 
-    <b>6. KETENTUAN HUKUM</b><br/>
-    Syarat dan Ketentuan ini tunduk dan diatur berdasarkan Hukum Negara <b>Republik Indonesia</b>.<br/><br/>
+        <b>5. HAK KEKAYAAN INTELEKTUAL (HKI)</b><br/>
+        Seluruh elemen aplikasi, termasuk kode sumber, desain antarmuka, dan logo <b>FitQuest</b>, adalah milik eksklusif kami dan dilindungi oleh undang-undang HKI. Anda dilarang keras menyalin, memodifikasi, merekayasa ulang, atau mendistribusikan konten ini tanpa izin tertulis.<br/><br/>
 
-    <b>7. PUSAT KONTAK</b><br/>
-    Untuk pertanyaan, keluhan, atau dukungan resmi, silakan hubungi tim kami melalui email di <b>[NichoNichoni143@gmail.com]</b>.<br/><br/>
+        <b>6. KETENTUAN HUKUM</b><br/>
+        Syarat dan Ketentuan ini tunduk dan diatur berdasarkan Hukum Negara <b>Republik Indonesia</b>.<br/><br/>
 
-    Terima kasih telah memilih dan berpetualang bersama <b>FitQuest</b>!
-    ]]>
-</string>
+        <b>7. PUSAT KONTAK</b><br/>
+        Untuk pertanyaan, keluhan, atau dukungan resmi, silakan hubungi tim kami melalui email di <b>NichoNichoni143@gmail.com</b>.<br/><br/>
 
-</string>
+        Terima kasih telah memilih dan berpetualang bersama <b>FitQuest</b>!
+        ]]></string>
+
+        <string name="terms_usage"><![CDATA[
+        <b>SYARAT DAN KETENTUAN PENGGUNAAN FITQUEST</b><br/><br/>
+
+        Dengan menggunakan aplikasi <b>FitQuest</b>, Anda secara otomatis <b>menyetujui, memahami, dan tunduk</b> pada seluruh Syarat & Ketentuan dan Kebijakan Privasi di bawah ini:<br/><br/>
+
+        <b>1. PERSETUJUAN PENGGUNAAN</b><br/>
+        Penggunaan layanan FitQuest menyiratkan persetujuan mutlak Anda terhadap dokumen ini dan <b><a href="https://google.com">Kebijakan Privasi kami</a></b>. Kelanjutan penggunaan Anda dianggap sebagai penerimaan atas setiap pembaruan syarat.<br/><br/>
+
+        <b>2. AKUN & KEAMANAN DATA</b><br/>
+        Anda bertanggung jawab penuh atas <b>kerahasiaan</b> <i>username</i> dan <i>password</i>. Anda wajib memastikan semua informasi pendaftaran (termasuk alamat email dan data pribadi) adalah <b>akurat dan terkini</b>.<br/><br/>
+
+        <b>3. PENGGUNAAN DATA & PRIVASI</b><br/>
+        Kami mengumpulkan dan memproses <b>data aktivitas lari, lokasi, dan informasi pribadi</b> Anda semata-mata untuk menyediakan dan meningkatkan kualitas layanan FitQuest. Detail dan hak Anda terkait penggunaan data diatur sepenuhnya dalam <b><a href="https://google.com">Kebijakan Privasi</a></b> kami.<br/><br/>
+
+        <b>4. PENOLAKAN TANGGUNG JAWAB (DISCLAIMER)</b><br/>
+        FitQuest hanyalah <b>alat bantu pemantauan kebugaran</b>. Kami <b>tidak bertanggung jawab</b> atas cedera, masalah kesehatan, atau hasil kebugaran yang Anda capai. <b>Penting: Selalu konsultasikan kondisi kesehatan dan rutinitas olahraga Anda dengan tenaga medis profesional.</b><br/><br/>
+
+        <b>5. HAK KEKAYAAN INTELEKTUAL (HKI)</b><br/>
+        Seluruh elemen aplikasi, termasuk kode sumber, desain antarmuka, dan logo <b>FitQuest</b>, adalah milik eksklusif kami dan dilindungi oleh undang-undang HKI. Anda dilarang keras menyalin, memodifikasi, merekayasa ulang, atau mendistribusikan konten ini tanpa izin tertulis.<br/><br/>
+
+        <b>6. KETENTUAN HUKUM</b><br/>
+        Syarat dan Ketentuan ini tunduk dan diatur berdasarkan Hukum Negara <b>Republik Indonesia</b>.<br/><br/>
+
+        <b>7. PUSAT KONTAK</b><br/>
+        Untuk pertanyaan, keluhan, atau dukungan resmi, silakan hubungi tim kami melalui email di <b>NichoNichoni143@gmail.com</b>.<br/><br/>
+
+        Terima kasih telah memilih dan berpetualang bersama <b>FitQuest</b>!
+        ]]></string>
+
     <!-- Mission -->
     <string name="mission_page">Halaman Mission</string>
 
