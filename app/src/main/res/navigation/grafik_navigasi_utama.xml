@@ -9,13 +9,24 @@
         android:id="@+id/berandaFragment"
         android:name="com.example.fitquest.ui.beranda.HomeFragment"
         android:label="Beranda"
-        tools:layout="@layout/fragment_beranda" />
+        tools:layout="@layout/fragment_beranda">
+        <action
+            android:id="@+id/action_beranda_to_tukarPoint"
+            app:destination="@id/tukarPointFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tukarPointFragment"
+        android:name="com.example.fitquest.ui.tukarpoint.TukarPointFragment"
+        android:label="Tukar Point"
+        tools:layout="@layout/fragment_tukarpoint" />
 
     <fragment
         android:id="@+id/misiFragment"
         android:name="com.example.fitquest.ui.misi.MissionFragment"
         android:label="Misi"
-        tools:layout="@layout/fragment_misi" />
+        tools:layout="@layout/fragment_misi">
+    </fragment>
 
     <fragment
         android:id="@+id/profilFragment"

@@ -1,49 +1,448 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface">
 
-    <!-- Konten -->
-    <LinearLayout
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/headermisi"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="100dp"
+        android:background="@drawable/header_complete_shadow"
+        android:backgroundTint="?attr/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/backbutton"
+            android:layout_width="38dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="19dp"
+            android:background="@drawable/ripplebutton"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrowleft" />
 
         <TextView
-            android:id="@+id/ivIkonMisi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="🎯"
-            android:textSize="64sp"
-            android:layout_marginBottom="16dp"/>
+            android:id="@+id/headerTitle"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/intermedium"
+            android:gravity="center"
+            android:text="MISI"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
-        <TextView
-            android:id="@+id/tvJudulMisi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Misi"
-            android:textSize="28sp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp"/>
+    <!-- Main Content Card -->
+    <RelativeLayout
+        android:id="@+id/contentCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headermisi"
+        android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/tvDeskripsiMisi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Halaman Misi"
-            android:textSize="16sp"
-            android:textColor="#666666"
-            android:gravity="center"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="10dp"
+            app:cardBackgroundColor="?attr/colorSurfaceVariant"
+            app:cardCornerRadius="12dp"
+            app:strokeColor="#DCD177"
+            app:strokeWidth="1dp">
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Title Section -->
+                <TextView
+                    android:id="@+id/titleMisiHarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/interextrabold"
+                    android:text="Misi Harian"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="24sp" />
+
+                <!-- Mission Cards Container -->
+                <LinearLayout
+                    android:id="@+id/missionCardsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/titleMisiHarian"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="13dp">
+
+                    <!-- Mission Card 1 - Lari 150m -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/missionCard1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#009AD2"
+                        app:strokeWidth="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iconRunner1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_runner" />
+
+                            <LinearLayout
+                                android:id="@+id/missionInfo1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="12dp"
+                                android:layout_toEndOf="@id/iconRunner1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/missionTitle1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Lari 150 m"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:id="@+id/missionReward1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Hadiah: 5 point"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="15sp"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="13dp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMulai1"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:backgroundTint="#00BCD4"
+                                android:fontFamily="@font/intersemibold"
+                                android:text="Mulai"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                app:cornerRadius="8dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Mission Card 2 - Lari 300m -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/missionCard2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#009AD2"
+                        app:strokeWidth="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iconRunner2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_runner" />
+
+                            <LinearLayout
+                                android:id="@+id/missionInfo2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="12dp"
+                                android:layout_toEndOf="@id/iconRunner2"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/missionTitle2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Lari 300 m"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:id="@+id/missionReward2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Hadiah: 10 point"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="15sp"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="13dp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMulai2"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:backgroundTint="#00BCD4"
+                                android:fontFamily="@font/intersemibold"
+                                android:text="Mulai"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                app:cornerRadius="8dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Mission Card 3 - Lari 500m -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/missionCard3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#009AD2"
+                        app:strokeWidth="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iconRunner3"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_runner" />
+
+                            <LinearLayout
+                                android:id="@+id/missionInfo3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="12dp"
+                                android:layout_toEndOf="@id/iconRunner3"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/missionTitle3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Lari 500 m"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:id="@+id/missionReward3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Hadiah: 15 point"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="15sp"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="13dp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMulai3"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:backgroundTint="#00BCD4"
+                                android:fontFamily="@font/intersemibold"
+                                android:text="Mulai"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                app:cornerRadius="8dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Mission Card 4 - Lari 1 km -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/missionCard4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#009AD2"
+                        app:strokeWidth="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iconRunner4"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_runner" />
+
+                            <LinearLayout
+                                android:id="@+id/missionInfo4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="12dp"
+                                android:layout_toEndOf="@id/iconRunner4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/missionTitle4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Lari 1 km"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:id="@+id/missionReward4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Hadiah: 25 point"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="15sp"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="13dp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMulai4"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:backgroundTint="#00BCD4"
+                                android:fontFamily="@font/intersemibold"
+                                android:text="Mulai"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                app:cornerRadius="8dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Mission Card 5 - Lari 2 km -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/missionCard5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#009AD2"
+                        app:strokeWidth="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iconRunner5"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_runner" />
+
+                            <LinearLayout
+                                android:id="@+id/missionInfo5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="12dp"
+                                android:layout_toEndOf="@id/iconRunner5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/missionTitle5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Lari 2 km"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="25sp" />
+
+                                <TextView
+                                    android:id="@+id/missionReward5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/intersemibold"
+                                    android:text="Hadiah: 50 point"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="15sp"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="13dp" />
+                            </LinearLayout>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMulai5"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="15dp"
+                                android:backgroundTint="#00BCD4"
+                                android:fontFamily="@font/intersemibold"
+                                android:text="Mulai"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                app:cornerRadius="8dp" />
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</RelativeLayout>

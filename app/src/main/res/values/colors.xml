@@ -30,4 +30,7 @@
     <!-- Bottom Navigation Color States -->
     <color name="bottom_nav_selected">#00A3FF</color>
     <color name="bottom_nav_unselected">#757575</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="red_500">#F44336</color>
+    <color name="colorPrimary">#009AD2</color>
 </resources>
