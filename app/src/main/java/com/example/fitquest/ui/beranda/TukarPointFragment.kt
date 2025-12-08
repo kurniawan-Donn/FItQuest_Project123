@@ -70,6 +70,7 @@ class TukarPointFragment : Fragment() {
     }
 
     private fun muatDataPoint() {
+        // TODO: Ambil data poin dari ViewModel/SharedPreferences
         val jumlahPoin = 0 // Contoh data statis
         binding.pointamount.text = jumlahPoin.toString()
     }
